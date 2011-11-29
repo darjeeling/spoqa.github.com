@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Blog Title</title>
+<link rel="stylesheet" href="/testblog/css/styles.css" />
+<link rel="stylesheet" href="/testblog/css/syntax.css" />
+</head>
+<body>
+
+<div id="body">
+<div>
+  <h1>posts</h1>
+  <ul class="posts">
+    
+  </ul>
+
+<div class="pagination">
+  
+  
+    <span class="previous">Previous</span>
+  
+  
+  <span class="page_number ">Page:  of </span>
+  
+  
+    <span class="next ">Next</span>
+  
+</div>
+
+
+
+</div>
+</body>
+</html>
+
