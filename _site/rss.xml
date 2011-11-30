@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coyled.com</title>
+    <link>http://coyled.com/</link>
+    <atom:link href="http://coyled.com/rss.xml" rel="self" type="application/rss+xml" />
+    <description>stuff from coyled</description>
+    <pubDate>Wed, 30 Nov 2011 16:06:29 +0900</pubDate>
+    <lastBuildDate>Wed, 30 Nov 2011 16:06:29 +0900</lastBuildDate>
+
+    
+    <item>
+      <title>code tutorial</title>
+      <link>/2011/11/26/code.html</link>
+      <pubDate>Sat, 26 Nov 2011 00:00:00 +0900</pubDate>
+      <author></author>
+      <guid>/2011/11/26/code</guid>
+      <description>&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>haha</title>
+      <link>/2011/11/25/haha.html</link>
+      <pubDate>Fri, 25 Nov 2011 00:00:00 +0900</pubDate>
+      <author></author>
+      <guid>/2011/11/25/haha</guid>
+      <description>&lt;p&gt;HAHAHA!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>이게 뭐야...</title>
+      <link>/2011/03/04/wtf.html</link>
+      <pubDate>Fri, 04 Mar 2011 00:00:00 +0900</pubDate>
+      <author></author>
+      <guid>/2011/03/04/wtf</guid>
+      <description>&lt;p&gt;구려&amp;#8230; ㅜㅜ&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>I, Love, You</title>
+      <link>/2010/03/04/bikes.html</link>
+      <pubDate>Thu, 04 Mar 2010 00:00:00 +0900</pubDate>
+      <author></author>
+      <guid>/2010/03/04/bikes</guid>
+      <description>&lt;p&gt;I Love You...&lt;/p&gt;</description>
+    </item>
+    
+
+  </channel> 
+</rss>

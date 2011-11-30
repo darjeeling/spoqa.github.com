@@ -3,14 +3,25 @@
 <head>
 <meta charset=utf-8 />
 <title>Blog Title</title>
-<link rel="stylesheet" href="/testblog/css/styles.css" />
-<link rel="stylesheet" href="/testblog/css/syntax.css" />
+<link rel="stylesheet" href="/css/styles.css?10" />
+<link rel="stylesheet" href="/css/syntax.css" />
+<script src="http://www.google.com/jsapi"></script>
+<script>
+ google.load( "webfont", "1" );
+ google.setOnLoadCallback(function() {
+  WebFont.load({ custom: {
+   families: [ "NanumGothic" ],
+   urls: [ "http://fontface.kr/NanumGothic/css" ]
+  }});
+ });
+</script>
+
 </head>
 <body>
 
-<div id="body">
-<h2 class="title">haha<h2>
-<p>HAHAHA!</p>
+<div class="body">
+<h1 class="post-title">haha<h1>
+<div class="post"><p>HAHAHA!</p></div>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">

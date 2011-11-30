@@ -3,12 +3,23 @@
 <head>
 <meta charset=utf-8 />
 <title>Blog Title</title>
-<link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/css/styles.css?10" />
 <link rel="stylesheet" href="/css/syntax.css" />
+<script src="http://www.google.com/jsapi"></script>
+<script>
+ google.load( "webfont", "1" );
+ google.setOnLoadCallback(function() {
+  WebFont.load({ custom: {
+   families: [ "NanumGothic" ],
+   urls: [ "http://fontface.kr/NanumGothic/css" ]
+  }});
+ });
+</script>
+
 </head>
 <body>
 
-<div id="body">
+<div class="body">
 {{ content }}
 </div>
 </body>
