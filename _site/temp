@@ -3,7 +3,7 @@
 <head>
 <meta charset=utf-8 />
 <title>Blog Title</title>
-<link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/css/styles.css?11" />
 <link rel="stylesheet" href="/css/syntax.css" />
 <script src="http://www.google.com/jsapi"></script>
 <script>
@@ -41,6 +41,10 @@
 
 
 
+
+<div class="footer">
+<p>RSS 구독 : <a href="atom.xml">Atom</a></p>
+<div>
 </div>
 </body>
 </html>
