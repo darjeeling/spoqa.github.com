@@ -1,30 +1,51 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Blog Title</title>
+<link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+<script src="http://www.google.com/jsapi"></script>
+<script>
+ google.load( "webfont", "1" );
+ google.setOnLoadCallback(function() {
+  WebFont.load({ custom: {
+   families: [ "NanumGothic" ],
+   urls: [ "http://fontface.kr/NanumGothic/css" ]
+  }});
+ });
+</script>
 
+</head>
+<body>
+
+<div class="body">
 <div>
   <h1>posts</h1>
   <ul class="posts">
-    {% for post in paginator.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/testblog{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
+    
   </ul>
 
 <div class="pagination">
   
-  {% if paginator.previous_page %}
-    <a href="/page{{paginator.previous_page}}" class="previous">Previous</a>
-  {% else %}
+  
     <span class="previous">Previous</span>
-  {% endif %}
   
-  <span class="page_number ">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
   
-  {% if paginator.next_page %}
-    <a href="/page{{paginator.next_page}}" class="next ">Next</a>
-  {% else %}
+  <span class="page_number ">Page:  of </span>
+  
+  
     <span class="next ">Next</span>
-  {% endif %}
+  
 </div>
 
+
+
+
+<div class="footer">
+<p>RSS 구독 : <a href="atom.xml">Atom</a></p>
+<div>
+</div>
+</body>
+</html>
 
