@@ -1,68 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset=utf-8 />
-<title>Blog Title</title>
-<link rel="stylesheet" href="/css/styles.css" />
-<link rel="stylesheet" href="/css/syntax.css" />
-<script src="http://www.google.com/jsapi"></script>
-<script>
- google.load( "webfont", "1" );
- google.setOnLoadCallback(function() {
-  WebFont.load({ custom: {
-   families: [ "NanumGothic" ],
-   urls: [ "http://fontface.kr/NanumGothic/css" ]
-  }});
- });
-</script>
+---
+layout: default
+---
 
-</head>
-<body>
-
-<div class="body">
   <h1>Blog Posts</h1>
   <div class="posts">
     <ul class="posts">
-      
-        <li><span class="posts-date">10 Dec 2011 &raquo; </span><a href="/2011/12/10/sqlalchemy-hybrid-attributes.html"><span class="posts-title">SQLAlchemy의 Hybrid Attributes를 이용해서 MySQL에서의 위치정보를 깔끔하게 암호화하기</span></a></li>
-      
-        <li><span class="posts-date">04 Mar 2010 &raquo; </span><a href="/2010/03/04/bikes.html"><span class="posts-title">I, Love, You</span></a></li>
-      
+      {% for post in paginator.posts %}
+        <li><span class="posts-date">{{ post.date | date_to_string }} &raquo; </span><a href="{{ post.url }}"><span class="posts-title">{{ post.title }}</span></a></li>
+      {% endfor %}
     </ul>
   </div>
 
 
   <div id="post-pagination" class="pagination">
 
-  
+  {% if paginator.previous_page %}
+  <p class="previous">
+  {% if paginator.previous_page == 1 %}
+  <a href="/">Previous</a>
+  {% else %}
+  <a href="/page{{paginator.previous_page}}">Previous</a>
+  {% endif %}
+  </p>
+  {% else %}
   <p class="previous disabled">
   <span>Previous</span>
   </p>
-  
+  {% endif %}
 
   <ul class="pages">
   <li class="page">
-  
+  {% if paginator.page == 1 %}
   <span class="current-page">1</span>
-  
+  {% else %}
+  <a href="/">1</a>
+  {% endif %}
   </li>
 
-  
+  {% for count in (2..paginator.total_pages) %}
+  <li class="page">
+  {% if count == paginator.page %}
+  <span class="current-page">{{count}}</span>
+  {% else %}
+  <a href="/page{{count}}">{{count}}</a>
+  {% endif %}
+  </li>
+  {% endfor %}
   </ul>
 
-  
+  {% if paginator.next_page %}
+  <p class="next">
+  <a href="/page{{paginator.next_page}}">Next</a>
+  </p>
+  {% else %}
   <p class="next disabled">
   <span>Next</span>
   </p>
-  
+  {% endif %}
 
   </div>
-
-
-<div class="footer">
-<p>RSS 구독 : <a href="atom.xml">Atom</a></p>
-<div>
-</div>
-</body>
-</html>
-
