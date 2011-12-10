@@ -2,12 +2,12 @@
 layout: default
 ---
 
-<h1 class="post-title">{{page.title}}<h1>
+<h1 class="post-title margin-auto">{{page.title}}</h1>
 
 {% if page.author %}
-<div class="author-info">
-  {% if page.author_email %}
-    <p>Author : <a href="mailto:{{page.author_email}}">{{page.author}}</a></p>  
+<div class="author-info margin-auto">
+  {% if page.author-email %}
+    <p>Author : <a href="mailto:{{page.author-email}}">{{page.author}}</a></p>  
   {% else %}
     <p>Author : {{page.author}}</p>  
   {% endif %}
@@ -16,12 +16,12 @@ layout: default
 
 {% if page.publish %}
   {% if page.publish == false %}
-    <div class="post">Coming soon</div>
+    <div class="post margin-auto">Coming soon</div>
   {% else %}
-    <div class="post">{{ content }}</div>
+    <div class="post margin-auto">{{ content }}</div>
   {% endif %}
 {% else %}
-<div class="post">{{ content }}</div>
+<div class="post margin-auto">{{ content }}</div>
 {% endif %}
 
 <div id="disqus_thread"></div>
