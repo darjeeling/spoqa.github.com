@@ -3,12 +3,31 @@ layout: default
 ---
 
 <h1 class="post-title">{{page.title}}<h1>
+
+{% if page.author %}
+<div class="author-info">
+  {% if page.author_email %}
+    <p>Author : <a href="mailto:{{page.author_email}}">{{page.author}}</a></p>  
+  {% else %}
+    <p>Author : {{page.author}}</p>  
+  {% endif %}
+</div>
+{% endif %}
+
+{% if page.publish %}
+  {% if page.publish == false %}
+    <div class="post">Coming soon</div>
+  {% else %}
+    <div class="post">{{ content }}</div>
+  {% endif %}
+{% else %}
 <div class="post">{{ content }}</div>
+{% endif %}
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-var disqus_shortname = 'akaz00'; // required: replace example with your forum shortname
+var disqus_shortname = 'spoqablog'; // required: replace example with your forum shortname
 var disqua_identifier = '{{page.title}}';
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {

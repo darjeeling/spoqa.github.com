@@ -5,25 +5,25 @@ layout: nil
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
-  <title>coyled.com</title>
-  <link href="http://coyled.com/"/>
-  <link type="application/atom+xml" rel="self" href="http://coyled.com/atom.xml"/>
+  <title>Spoqa tech blog</title>
+  <link href="http://spoqa.github.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://spoqa.github.com/atom.xml"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://coyled.com/</id>
+  <id>http://spoqa.github.com</id>
   <author>
-    <name>Dave Coyle</name>
-    <email>coyled@coyled.com</email>
+    <name>Spoqa Developer</name>
+    <email>dev@spoqa.com</email>
   </author>
 
   {% for post in site.posts %}
   <entry>
-    <id>http://coyled.com{{ post.id }}</id>
-    <link type="text/html" rel="alternate" href="http://coyled.com{{ post.url }}"/>
+    <id>http://spoqa.github.com{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://spoqa.github.com{{ post.url }}"/>
     <title>{{ post.title }}</title>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
-      <name>Dave Coyle</name>
-      <uri>http://coyled.com/</uri>
+      <name>{{ post.author }}</name>
+      <uri>http://spoqa.github.com{{ post.url }}</uri>
     </author>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
