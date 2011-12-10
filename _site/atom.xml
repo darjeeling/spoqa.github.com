@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>coyled.com</title>
+  <link href="http://coyled.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://coyled.com/atom.xml"/>
+  <updated>2011-11-30T16:26:38+09:00</updated>
+  <id>http://coyled.com/</id>
+  <author>
+    <name>Dave Coyle</name>
+    <email>coyled@coyled.com</email>
+  </author>
+
+  
+  <entry>
+    <id>http://coyled.com/2011/11/26/code</id>
+    <link type="text/html" rel="alternate" href="http://coyled.com/2011/11/26/code.html"/>
+    <title>code tutorial</title>
+    <updated>2011-11-26T00:00:00+09:00</updated>
+    <author>
+      <name>Dave Coyle</name>
+      <uri>http://coyled.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;Liquid error: No such file or directory - posix_spawnp&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://coyled.com/2011/11/25/haha</id>
+    <link type="text/html" rel="alternate" href="http://coyled.com/2011/11/25/haha.html"/>
+    <title>haha</title>
+    <updated>2011-11-25T00:00:00+09:00</updated>
+    <author>
+      <name>Dave Coyle</name>
+      <uri>http://coyled.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;HAHAHA!&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://coyled.com/2011/03/04/wtf</id>
+    <link type="text/html" rel="alternate" href="http://coyled.com/2011/03/04/wtf.html"/>
+    <title>이게 뭐야...</title>
+    <updated>2011-03-04T00:00:00+09:00</updated>
+    <author>
+      <name>Dave Coyle</name>
+      <uri>http://coyled.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;구려&amp;#8230; ㅜㅜ&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <id>http://coyled.com/2010/03/04/bikes</id>
+    <link type="text/html" rel="alternate" href="http://coyled.com/2010/03/04/bikes.html"/>
+    <title>I, Love, You</title>
+    <updated>2010-03-04T00:00:00+09:00</updated>
+    <author>
+      <name>Dave Coyle</name>
+      <uri>http://coyled.com/</uri>
+    </author>
+    <content type="html">&lt;p&gt;I Love You...&lt;/p&gt;</content>
+  </entry>
+  
+ 
+</feed>
