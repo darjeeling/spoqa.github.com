@@ -71,7 +71,12 @@ font-size: 0.9em;
 font-family: "NanumGothic", Monaco, "Courier New", mono;
 font-size: 1.0em;
 }
-
+.posts .posts-description {
+color:#777;
+font-size:0.8em;
+margin-top:10px;
+margin-bottom:20px;
+}
 .pagination {
 text-align: center;
 padding: 10px;

@@ -6,7 +6,8 @@ layout: default
   <div class="posts">
     <ul class="posts">
       {% for post in paginator.posts %}
-        <li><span class="posts-date">{{ post.date | date_to_string }} &raquo; </span><a href="{{ post.url }}"><span class="posts-title">{{ post.title }}</span></a></li>
+        <li><span class="posts-date">{{ post.date | date_to_string }} &raquo; </span><a href="{{ post.url }}"><span class="posts-title">{{ post.title }}</span></a>
+        <p class="posts-description">{{ post.description }}</p></li>
       {% endfor %}
     </ul>
   </div>

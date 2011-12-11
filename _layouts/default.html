@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Spoqa tech blog</title>
+<title>Spoqa Tech Blog</title>
 <link rel="stylesheet" href="/css/styles.css?6" />
 <link rel="stylesheet" href="/css/syntax.css" />
 <script src="http://www.google.com/jsapi"></script>
@@ -15,7 +15,22 @@
   }});
  });
 </script>
-
+{% if page.title %}
+<meta property="og:title" content="{{ page.title }}"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="http://spoqa.github.com{{ page.url }}"/>
+<meta property="og:site_name" content="Spoqa Tech Blog"/>
+<meta property="og:description"
+      content="{{ page.description }}"/>
+{% else %}
+<meta property="og:title" content="Spoqa Tech Blog"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:url" content="http://spoqa.github.com/"/>
+<meta property="og:site_name" content="Spoqa Tech Blog"/>
+<meta property="og:description"
+      content="몇가지 Code snippet과 설명등을 포함하여 매주 1회씩 스포카 팀이 배운 여러가지 기술들에 대해 소개합니다."/>
+{% endif %}
+<meta property="og:image" content="http://www.gravatar.com/avatar/52813188698089bda7e20154c114d17e.png"/>
 </head>
 <body>
 

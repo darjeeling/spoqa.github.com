@@ -3,6 +3,7 @@ layout: entry
 title: SQLAlchemy의 Hybrid Attributes를 이용해서 MySQL에서의 위치정보를 깔끔하게 암호화하기
 author: shinvee
 author-email: shinvee@spoqa.com
+description: 위치 기반 서비스(Location-based Service)를 국내에서 합법적으로 운영하기 위해선 등록위치정보의 저장을 전부 암호화해야 한다. Spoqa 개발팀은 SQLAlchemy의 Hybrid Attributes를 사용하여 위치정보를 암호화하였다.
 ---
 
 **[위치 기반 서비스][](Location-based Service)**를 국내에서 합법적으로 운영하기 위해선 위치기반 사업자 등록이 필요하다. 이 과정은 여러가지 보안사항에 대한 적용을 강제하고 있는데, 이 중 위치정보의 저장을 전부 암호화해야 한다는 조항이 있다.
