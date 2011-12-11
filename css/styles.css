@@ -20,10 +20,14 @@ height: 100%;
 }
 
 li {
+list-style-type: none;
+}
+
+.post li {
 margin-left: 2.0em;
 }
 
-ol {
+.post ol {
 margin-bottom: 20px;
 }
 
