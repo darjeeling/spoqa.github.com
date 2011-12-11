@@ -20,7 +20,11 @@ height: 100%;
 }
 
 li {
-list-style-type: none;
+margin-left: 2.0em;
+}
+
+ol {
+margin-bottom: 20px;
 }
 
 h1 {
