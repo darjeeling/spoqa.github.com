@@ -24,6 +24,7 @@ list-style-type: none;
 }
 
 .post li {
+list-style-type: inherit;
 margin-left: 2.0em;
 }
 
