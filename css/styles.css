@@ -8,6 +8,21 @@ margin-left: auto;
 margin-right: auto;
 }
 
+strong {
+color: black;
+}
+
+img {
+border: 2px solid #eee;
+display: block;
+}
+
+pre {
+background-color: #eee;
+border-radius: 6px;
+padding: 10px;
+}
+
 a {
 color: #40656B;
 text-decoration: none;
@@ -133,7 +148,18 @@ margin-bottom: 15px;
 }
 
 .post p {
+color: #333;
 margin-bottom: 20px;
+}
+
+.post .terminal {
+color: #eee;
+background-color: #333;
+padding: 1px;
+padding-left: 10px;
+font-size: 14px;
+margin-bottom: 20px;
+border-radius: 5px;
 }
 
 .footer {
