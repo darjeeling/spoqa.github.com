@@ -14,14 +14,10 @@ layout: default
 </div>
 {% endif %}
 
-{% if page.publish %}
-  {% if page.publish == false %}
-    <div class="post margin-auto">Coming soon</div>
-  {% else %}
-    <div class="post margin-auto">{{ content }}</div>
-  {% endif %}
+{% if page.publish == false %}
+  <div class="post margin-auto">Coming soon</div>
 {% else %}
-<div class="post margin-auto">{{ content }}</div>
+  <div class="post margin-auto">{{ content }}</div>
 {% endif %}
 
 <div id="disqus_thread"></div>
