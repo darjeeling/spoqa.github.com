@@ -4,7 +4,7 @@ title: 스포카 서버의 구조
 author: 문성원
 author-email: longfin@spoqa.com
 description: 스포카 서버의 구조와 사용된 기술들에 대해서 알아봅니다.
-publish: false
+publish: true
 ---
 
 안녕하세요. [스포카 개발팀]에서 서버 관련 개발 업무를 담당하고 있는 문성원입니다. 오늘은 스포카 서버의 구조와 사용된 기술들에 대해서 함께 살펴보겠습니다. 
