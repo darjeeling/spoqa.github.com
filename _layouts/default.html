@@ -2,10 +2,13 @@
 <html>
 <head>
 <meta charset=utf-8 />
+<meta name="viewport" content="width=device-width; initial-scale=2.0; maximum-scale=1.0; user-scalable=0;" />
+
 <title>Spoqa Tech Blog</title>
-<link rel="stylesheet" href="/css/styles.css?6" />
+<!-- <link rel="stylesheet" href="/css/styles.css?14" /> -->
 <link rel="stylesheet" href="/css/syntax.css" />
 <script src="http://www.google.com/jsapi"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
  google.load( "webfont", "1" );
  google.setOnLoadCallback(function() {
@@ -14,7 +17,188 @@
    urls: [ "http://fontface.kr/NanumGothic/css" ]
   }});
  });
+
+/*
+$('a').hover(
+  function(obj) {
+    alert('in');
+  },
+  function(obj) {
+    alert('out');
+  }
+);
+*/
+
 </script>
+
+
+<style>
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+background-color: #E6ECED;
+width: 100%;
+height: 100%;
+}
+
+ol, li {
+list-style-position: inside;
+}
+
+a {
+/*font-weight: bold;*/
+color: #104047;
+text-decoration: none;
+}
+
+h1, h2, h3, h4 ,h5, h6 {
+font-family: arial;
+color: #444;
+text-shadow: 1px 1px 1px white;
+}
+
+p {
+margin-top: 20px;
+margin-bottom: 20px;
+line-height: 1.8em;
+}
+
+.selected {
+font-weight: bold; text-decoration: underline;
+}
+
+#menu-list ol {
+display: inline-block;
+}
+#menu-list li {
+display: inline;
+}
+#menu-list {
+font-family: arial;
+text-shadow: 1px 1px 1px white;
+color: #444; 
+font-size: 20px;
+margin-top: 10px;
+}
+#menu-list .seperator {
+color: #BBB;
+}
+#menu-list a {
+color: #000;
+}
+
+#recruit-ribbon {
+position: absolute;
+left: 0;
+top: 0;
+}
+
+.content-body {
+width: 96%;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+padding: 2%;
+}
+
+/* blog list */
+
+.posts li, ol {
+}
+
+.list-type-none {
+list-style: none;
+}
+
+/* */
+
+/* blog */
+
+.post-date {
+float: right;
+font-size: 0.8em;
+color: #666;
+margin-bottom: 10px;
+}
+
+.post img {
+max-width: 100%;
+display: block;
+}
+
+.post ol, li {
+line-height: 1.8em;
+}
+
+.post-title {
+font-family: "NanumGothic", Monaco, "Courier New", mono;
+font-weight: bold;
+font-size: 19px;
+color: #104047;
+}
+
+.post-description {
+font-size: 14px;
+margin-top: 20px;
+margin-bottom: 10px;
+line-height: 1.8em;
+}
+
+.pagination {
+text-align: center;
+padding: 10px;
+font-family: Helvetica, sans-serif;
+}
+.pagination p {
+display:inline;
+}
+.pagination span {
+display: inline;
+}
+.pagination ul {
+display: inline-block;
+margin-left: 20px;
+margin-right: 20px;
+}
+.pagination li {
+display: inline-block;
+}
+
+/* blog ends */
+
+/* about */
+
+.author {
+overflow: auto;
+}
+.author-info {
+margin-left: 25%;
+}
+.member-info {
+margin-top: 20px;
+}
+.sns img {
+display: inline;
+vertical-align: top;
+}
+.nick-name {
+font-weight: bold;
+font-size: 20px;
+}
+.author-picture {
+width: 20%;
+float: left;
+border: 6px solid #DDD;
+margin-bottom: 20px;
+}
+
+/* */
+
+</style>
 {% if page.title %}
 <meta property="og:title" content="{{ page.title }}"/>
 <meta property="og:type" content="article"/>
@@ -33,13 +217,56 @@
 <meta property="og:image" content="http://www.gravatar.com/avatar/52813188698089bda7e20154c114d17e.png"/>
 </head>
 <body>
+<div class="content-body">
+  <div class="wrapper">
+    <div class="header">
+      <a href="http://spo.qa/get"><img src="/images/logo.png" style="margin-top: 10px; padding-right: 15px; vertical-align: middle;" /></a><span style="
+      font-family: arial;
+      font-weight: bold;
+      font-size: 40px;
+      color: white;
+      text-shadow: 0px 1px 1px #333;
+      display: inline-block;
+      ">Dev Blog</span>
+        <ol id="menu-list">
+          {% if page.url == '/about.html' %}
+            <li><a class="selected" href="/about.html">About</a></li><span class="seperator">&nbsp;/</span>
+          {% else %}
+            <li><a href="/about.html">About</a></li><span class="seperator">&nbsp;/</span>
+          {% endif %}
+          {% if page.url != '/about.html' and page.url != '/job.html' %}
+            <li><a class="selected" href="/index.html">Blog</a></li><span class="seperator">&nbsp;/</span>
+          {% else %}
+            <li><a href="/index.html">Blog</a></li><span class="seperator">&nbsp;/</span>
+          {% endif %}
 
-<div class="body">
-  {{ content }}
+          {% if page.url == '/job.html' %}
+            <li><a class="selected" href="/job.html">Job</a></li><span class="seperator">&nbsp;/</span>
+          {% else %}
+            <li><a href="/job.html">Job</a></li><span class="seperator">&nbsp;/</span>
+          {% endif %}
+          <li><a href="https://github.com/spoqa">github</a></li>
+          <li><a href="/atom.xml"><img style="vertical-align: middle; margin-left: 5px;" src="/images/atom.png" /></a></li>
+        </ol>
+    </div>
+  
+    <hr style="margin-top: 20px; margin-bottom: 20px;" />
 
-  <div class="footer">
-  <p>RSS 구독 : <a href="http://spoqa.github.com/atom.xml">Atom</a></p>
+    <div class="content">
+      {{ content }}
+    </div>
+    <div class="push">
+    </div>
   </div>
+
+  <div style="margin-bottom: 50px;" class="footer">
+    <hr style="margin-top: 20px; margin-bottom: 20px;" />
+    <div id="info">
+      <span>© Spoqa Inc. All rights reserved.</span>
+      <span>powerd by <a style="color: gray;" href="http://pages.github.com/">pages</a></span>
+    </div>
+  </div>
+
 </div>
 </body>
 </html>

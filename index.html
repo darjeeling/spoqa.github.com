@@ -2,14 +2,22 @@
 layout: default
 ---
 
-  <h1>Blog Posts</h1>
   <div class="posts">
-    <ul class="posts">
+    <ul class="posts list-type-none">
       {% for post in paginator.posts %}
         {% if post.publish != false %}
-        <li><span class="posts-date">{{ post.date | date_to_string }} &raquo; </span><a href="{{ post.url }}"><span class="posts-title">{{ post.title }}</span></a>
-        <p class="posts-description">{{ post.description }}</p></li>
+        <li></span><a href="{{ post.url }}"><span class="post-title">{{ post.title }}</span></a>
+        <p class="post-description">{{ post.description }}</p>
+        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        </li>
         {% endif %}
+        <div style="clear: both;"></div>
+        <hr style="margin-bottom: 20px; opacity: 0.5;" />
+        <!--
+        {% if forloop.last == false %}
+          <hr style="margin-bottom: 20px; opacity: 0.5;" />
+        {% endif %}
+        -->
       {% endfor %}
     </ul>
   </div>
@@ -20,14 +28,14 @@ layout: default
   {% if paginator.previous_page %}
   <p class="previous">
   {% if paginator.previous_page == 1 %}
-  <a href="/">Previous</a>
+  <a href="/">Prev</a>
   {% else %}
-  <a href="/page{{paginator.previous_page}}">Previous</a>
+  <a href="/page{{paginator.previous_page}}">Prev</a>
   {% endif %}
   </p>
   {% else %}
   <p class="previous disabled">
-  <span>Previous</span>
+  <span>Prev</span>
   </p>
   {% endif %}
 
