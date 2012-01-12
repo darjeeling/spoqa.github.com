@@ -16,17 +16,19 @@ layout: nil
   </author>
 
   {% for post in site.posts %}
-  <entry>
-    <id>http://spoqa.github.com{{ post.id }}</id>
-    <link type="text/html" rel="alternate" href="http://spoqa.github.com{{ post.url }}"/>
-    <title>{{ post.title }}</title>
-    <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <author>
-      <name>{{ post.author }}</name>
-      <uri>http://spoqa.github.com{{ post.url }}</uri>
-    </author>
-    <content type="html">{{ post.content | xml_escape }}</content>
-  </entry>
+      {% if post.publish != false %}
+      <entry>
+        <id>http://spoqa.github.com{{ post.id }}</id>
+        <link type="text/html" rel="alternate" href="http://spoqa.github.com{{ post.url }}"/>
+        <title>{{ post.title }}</title>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <author>
+          <name>{{ post.author }}</name>
+          <uri>http://spoqa.github.com{{ post.url }}</uri>
+        </author>
+        <content type="html">{{ post.content | xml_escape }}</content>
+      </entry>
+      {% endif %}
   {% endfor %}
  
 </feed>

@@ -2,10 +2,13 @@
 <html>
 <head>
 <meta charset=utf-8 />
+<meta name="viewport" content="width=device-width; initial-scale=2.0; maximum-scale=1.0; user-scalable=0;" />
+
 <title>Spoqa Tech Blog</title>
-<link rel="stylesheet" href="/css/styles.css?6" />
+<link rel="stylesheet" href="/css/styles.css" />
 <link rel="stylesheet" href="/css/syntax.css" />
 <script src="http://www.google.com/jsapi"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
  google.load( "webfont", "1" );
  google.setOnLoadCallback(function() {
@@ -14,7 +17,20 @@
    urls: [ "http://fontface.kr/NanumGothic/css" ]
   }});
  });
+
+/*
+$('a').hover(
+  function(obj) {
+    alert('in');
+  },
+  function(obj) {
+    alert('out');
+  }
+);
+*/
+
 </script>
+
 {% if page.title %}
 <meta property="og:title" content="{{ page.title }}"/>
 <meta property="og:type" content="article"/>
@@ -33,13 +49,49 @@
 <meta property="og:image" content="http://www.gravatar.com/avatar/52813188698089bda7e20154c114d17e.png"/>
 </head>
 <body>
+<div class="content-body">
+  <div class="wrapper">
+    <div class="header">
+      <a href="http://spo.qa/get"><img class="logo-img" src="/images/logo.png" /></a><a class="dev-blog" href="/">Dev Blog</a>
+        <ol id="menu-list">
+          {% if page.url == '/about.html' %}
+            <li><a class="selected" href="/about.html">About</a></li><span class="seperator">&nbsp;/</span>
+          {% else %}
+            <li><a href="/about.html">About</a></li><span class="seperator">&nbsp;/</span>
+          {% endif %}
+          {% if page.url != '/about.html' and page.url != '/job.html' %}
+            <li><a class="selected" href="/index.html">Blog</a></li><span class="seperator">&nbsp;/</span>
+          {% else %}
+            <li><a href="/index.html">Blog</a></li><span class="seperator">&nbsp;/</span>
+          {% endif %}
 
-<div class="body">
-  {{ content }}
+          {% if page.url == '/job.html' %}
+            <li><a class="selected" href="/job.html">We're hiring!</a></li><span class="seperator">&nbsp;/</span>
+          {% else %}
+            <li><a href="/job.html">We're hiring!</a></li><span class="seperator">&nbsp;/</span>
+          {% endif %}
+          <li><a href="https://github.com/spoqa">github</a></li>
+          <li><a href="/atom.xml"><img class="atom-img" src="/images/atom.png" /></a></li>
+        </ol>
+    </div>
+  
+    <hr style="margin-top: 20px; margin-bottom: 20px;" />
 
-  <div class="footer">
-  <p>RSS 구독 : <a href="http://spoqa.github.com/atom.xml">Atom</a></p>
+    <div class="content">
+      {{ content }}
+    </div>
+    <div class="push">
+    </div>
   </div>
+
+  <div style="margin-bottom: 50px;" class="footer">
+    <hr style="margin-top: 20px; margin-bottom: 20px;" />
+    <div id="info">
+      <span>© Spoqa Inc. All rights reserved.</span>
+      <span>powerd by <a style="color: gray;" href="http://pages.github.com/">pages</a></span>
+    </div>
+  </div>
+
 </div>
 </body>
 </html>

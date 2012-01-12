@@ -3,94 +3,158 @@ margin: 0;
 padding: 0;
 }
 
-.margin-auto {
-margin-left: auto;
-margin-right: auto;
-}
-
-strong {
-color: black;
-}
-
-img {
-border: 2px solid #eee;
-display: block;
-}
-
-pre {
-background-color: #eee;
-border-radius: 6px;
-padding: 10px;
-}
-
-a {
-color: #40656B;
-text-decoration: none;
-font-weight: bold;
-}
-
-html, body {
+body {
 background-color: #E6ECED;
+width: 100%;
 height: 100%;
 }
 
-li {
-list-style-type: none;
+ol, li {
+list-style-position: inside;
 }
 
-.post li {
-list-style-type: inherit;
-margin-left: 2.0em;
+a {
+/*font-weight: bold;*/
+color: #104047;
+text-decoration: none;
 }
 
-.post ol {
+h1, h2, h3, h4 ,h5, h6 {
+font-family: arial;
+color: #444;
+text-shadow: 1px 1px 1px white;
+}
+
+p {
+margin-top: 20px;
+margin-bottom: 20px;
+line-height: 1.8em;
+}
+
+.selected {
+font-weight: bold; text-decoration: underline;
+}
+
+#menu-list ol {
+display: inline-block;
+}
+#menu-list li {
+display: inline;
+}
+#menu-list {
+font-family: arial;
+text-shadow: 1px 1px 1px white;
+color: #444; 
+font-size: 20px;
+margin-top: 10px;
+}
+#menu-list .seperator {
+color: #BBB;
+}
+#menu-list a {
+color: #000;
+}
+
+#recruit-ribbon {
+position: absolute;
+left: 0;
+top: 0;
+}
+
+.content-body {
+width: 96%;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+padding: 2%;
+}
+
+/* blog list */
+
+.posts li, ol {
+}
+
+.list-type-none {
+list-style: none;
+}
+
+/* */
+
+/* index */
+.atom-img {
+vertical-align: middle; 
+margin-left: 5px;
+}
+.logo-img {
+margin-top: 10px; 
+padding-right: 15px; 
+vertical-align: middle;
+}
+.dev-blog {
+font-family: arial;
+font-weight: bold;
+font-size: 40px;
+color: white;
+text-shadow: 0px 1px 1px #333;
+display: inline-block;
+}
+.posts .post-title {
+font-size: 24px;
+}
+
+/* */
+
+/* blog */
+
+.post-author-info {
+margin-top: 20px;
 margin-bottom: 20px;
 }
-
-h1 {
-font-size: 1.6em;
-margin-left: 20px;
-padding-top: 10px;
-font-family: Helvetica, sans-serif;
+.post-author-info .portrait {
+width: 7%;
+vertical-align: middle;
 }
-
-.body {
-width: 800px;
-margin-left: auto;
-margin-right: auto;
-background-color: #E1E7E8;
+.post-author-info .author-name {
+font-size: 1.5em; 
+font-weight: bold; 
+margin-left: 10px;
 }
-
-.posts {
-width: 700px;
-padding: 10px;
-padding-left: 30px;
-padding-right: 30px;
-margin-top: 10px;
+.post-footer {
+text-align: center; 
+margin-top: 20px; 
+margin-bottom: 20px;
+}
+.post-date {
+float: right;
+font-size: 0.8em;
+color: #666;
 margin-bottom: 10px;
-margin-left: auto;
-margin-right: auto;
-background-color: #FFFFFF;
-border-radius: 16px;
-text-align: justify;
 }
-.posts ul {
-padding: 0px;
+
+.post img {
+max-width: 100%;
+display: block;
 }
-.posts .posts-date {
-font-family: Monaco, "Courier New", monospace;
-font-size: 0.9em;
+
+.post ol, li {
+line-height: 1.8em;
 }
-.posts .posts-title {
+
+.post-title {
 font-family: "NanumGothic", Monaco, "Courier New", mono;
-font-size: 1.0em;
+font-weight: bold;
+font-size: 19px;
+color: #104047;
+font-size: 30px;
 }
-.posts .posts-description {
-color:#777;
-font-size:0.8em;
-margin-top:10px;
-margin-bottom:20px;
+
+.post-description {
+font-size: 14px;
+margin-top: 20px;
+margin-bottom: 10px;
+line-height: 1.8em;
 }
+
 .pagination {
 text-align: center;
 padding: 10px;
@@ -111,58 +175,32 @@ margin-right: 20px;
 display: inline-block;
 }
 
-/* entry */
+/* blog ends */
 
-.post-title {
-width: 740px;
-padding-top: 20px;
-font-size: 1.4em;
-font-weight: bold;
-line-height: 180%;
+/* about */
+
+.author {
+overflow: auto;
 }
-
 .author-info {
-width: 740px;
+margin-left: 25%;
+}
+.member-info {
 margin-top: 20px;
-text-align: right;
+}
+.sns img {
+display: inline;
+vertical-align: top;
+}
+.nick-name {
 font-weight: bold;
+font-size: 20px;
 }
-
-.post {
-width: 700px;
-padding: 20px;
-margin-top: 30px;
-margin-bottom: 30px;
-background-color: #FFFFFF;
-border-radius: 10px;
-text-align: justify;
-font-size: 1.0em;
-line-height: 180%;
-font-family: normal;
-font-weight: normal;
-}
-
-.post hr {
-margin-top: 15px;
-margin-bottom: 15px;
-}
-
-.post p {
-color: #333;
+.author-picture {
+width: 20%;
+float: left;
+border: 6px solid #DDD;
 margin-bottom: 20px;
 }
 
-.post .terminal {
-color: #eee;
-background-color: #333;
-padding: 1px;
-padding-left: 10px;
-font-size: 14px;
-margin-bottom: 20px;
-border-radius: 5px;
-}
-
-.footer {
-text-align: center;
-font-size: 0.7em;
-}
+/* */
