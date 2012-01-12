@@ -2,28 +2,28 @@
 layout: default
 ---
 
-<h1 class="post-title margin-auto" style="font-size: 30px;">{{page.title}}</h1>
+<h1 class="post-title">{{page.title}}</h1>
 
 {% if page.author %}
-<div class="margin-auto" style="margin-top: 20px; margin-bottom: 20px;">
-    <img src="/images/profile/{{page.author}}.png" style="width: 7%; vertical-align: middle;" />
+<div class="post-author-info">
+    <img class="portrait" src="/images/profile/{{page.author}}.png" />
   {% if page.author-email %}
-    <span style="font-size: 1.5em; font-weight: bold; margin-left: 10px;"><a href="mailto:{{page.author-email}}">{{page.author}}</a></span>  
+    <span class="author-name"><a href="mailto:{{page.author-email}}">{{page.author}}</a></span>  
   {% else %}
-    <span style="font-size: 1.5em; font-weight: bold; margin-left: 10px;">{{page.author}}</span>  
+    <span class="author-name">{{page.author}}</span>  
   {% endif %}
 </div>
 {% endif %}
 
 {% if page.publish == false %}
-  <div class="post margin-auto">Coming soon</div>
+  <div class="post">Coming soon</div>
 {% else %}
-  <div class="post margin-auto">{{ content }}</div>
+  <div class="post">{{ content }}</div>
 {% endif %}
 <p style="float: right;">{{ page.date | date: "%Y-%m-%d" }}</p>
 
 <hr style="clear: both;" />
-<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;"><a href="/">◀ List</a></div>
+<div class="post-footer"><a href="/">◀ List</a></div>
 
 <div id="disqus_thread" class="margin-auto"></div>
 <script type="text/javascript">
