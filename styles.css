@@ -9,6 +9,10 @@ text-decoration: none;
 font-weight: bold;
 }
 
+img {
+border: 0;
+}
+
 html, body {
 background-color: #E6ECED;
 height: 100%;
