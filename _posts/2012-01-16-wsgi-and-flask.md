@@ -26,7 +26,7 @@ publish: true
 
 <script src="https://gist.github.com/1606137.js"> </script>
 
-<code>App</code>는 [Python] [클래스(Class)][Class]로 <code>environ</code>과 <code>start_response</code>를 멤버 변수로 가지는데, 여기에는 약간의 트릭이 있습니다. 생성자(Constructor)인 <code>App</code>를 함수처럼 사용하게 하여 리턴되는 결과(실제로는 생성자를 통해 생성된 객체겠죠.)가 <code>\_\_iter\_\_</code>를 구현한 [순회 가능한(Iterable)][Iterable] 값이 되게 하는 것이죠. (덤으로 이 객체는 [발생자(Generator)][Generator]를 돌려주게 됩니다.)
+<code>App</code>는 [Python 클래스(Class)][Class]로 <code>environ</code>과 <code>start_response</code>를 멤버 변수로 가지는데, 여기에는 약간의 트릭이 있습니다. 생성자(Constructor)인 <code>App</code>를 함수처럼 사용하게 하여 리턴되는 결과(실제로는 생성자를 통해 생성된 객체겠죠.)가 <code>\_\_iter\_\_</code>를 구현한 [순회 가능한(Iterable)][Iterable] 값이 되게 하는 것이죠. (덤으로 이 객체는 [발생자(Generator)][Generator]를 돌려주게 됩니다.)
 
 그럼 이제 이 코드들을 실행하려면 어떻게 해야할까요? 그러려면 먼저 [WSGI] 규격에 맞게 어플리케이션을 실행시켜 줄 서버를 작성해야합니다. 하지만 다행히도 [Python] 2.5부터 제공되는 [<code>wsgiref.simple_server</code>][wsgiref.simple_server]를 이용하면 간단히 테스트 해 볼 수 있습니다.(서버를 직접 작성하는 부분에 대해선 나중에 다루도록 하겠습니다.) 
 
@@ -94,7 +94,7 @@ publish: true
 
 여태까지 우리는 요청에 대한 응답으로 단순한 문자열을 사용했습니다. 하지만 일반적인 웹 어플리케이션의 응답은 대부분이 그것보다 훨씬 복잡하지요. 이를 보다 쉽게 작성할 수 있게끔 도와주는 것이 바로 [Flask]의 [템플릿(Template)](http://flask.pocoo.org/docs/templating/)입니다. [Flask]는 기본 템플릿 엔진으로 (역시 [Armin Ronacher]가 작성한)[Jinja2]를 사용합니다.
 
-기본적으로 템플릿엔진은 별도의 규칙(여기서는 [Jinja2])에 맞게 작성된 템플릿 파일을 읽어 환경(Context)에 맞게 적용한 결과물을 돌려주는데 이 과정을 [Flask]에서는 [<code>render_template()</code>]가 담당하고 있습니다. 다음 코드는 <code>hello.html</code>이라는 템플릿 파일을 읽어서 이름을 적용한 뒤에 돌려주는 코드입니다.
+기본적으로 템플릿엔진은 별도의 규칙(여기서는 [Jinja2])에 맞게 작성된 템플릿 파일을 읽어 환경(Context)에 맞게 적용한 결과물을 돌려주는데 이 과정을 [Flask]에서는 [<code>render_template()</code>](http://flask.pocoo.org/docs/api/?highlight=render#template-rendering)가 담당하고 있습니다. 다음 코드는 <code>hello.html</code>이라는 템플릿 파일을 읽어서 이름을 적용한 뒤에 돌려주는 코드입니다.
 
 <script src="https://gist.github.com/1616379.js"> </script>
 
