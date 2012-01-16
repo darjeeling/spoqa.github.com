@@ -4,7 +4,7 @@ title: Flask로 만들어 보는 WSGI 어플리케이션
 author: 문성원
 author-email: longfin@spoqa.com
 description: WSGI 어플리케이션의 작성법과 이러한 일을 쉽게 도와주는 Flask를 소개합니다.
-publish: false
+publish: true
 ---
 
 안녕하세요. [스포카] 크리에이터팀 문성원입니다. 오늘은 [WSGI(Web Server Gateway Interface)][WSGI] 어플리케이션을 직접 작성해보고, 또 이런 작성을 보다 쉽게 도와주는 프레임워크 중 하나인 [Flask]에 대해서 알아보겠습니다.
