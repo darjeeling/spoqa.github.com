@@ -1,0 +1,778 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>Spoqa tech blog</title>
+  <link href="http://spoqa.github.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://spoqa.github.com/atom.xml"/>
+  <updated>2012-01-19T20:21:54+09:00</updated>
+  <id>http://spoqa.github.com</id>
+  <author>
+    <name>Spoqa Developer</name>
+    <email>dev@spoqa.com</email>
+  </author>
+
+  
+      
+      <entry>
+        <id>http://spoqa.github.com/2012/01/18/hig</id>
+        <link type="text/html" rel="alternate" href="http://spoqa.github.com/2012/01/18/hig.html"/>
+        <title>HIG 비교 분석</title>
+        <updated>2012-01-18T00:00:00+09:00</updated>
+        <author>
+          <name>정현석</name>
+          <uri>http://spoqa.github.com/2012/01/18/hig.html</uri>
+        </author>
+        <content type="html">&lt;h2&gt;HIG&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;HIG&lt;/strong&gt;는 &lt;strong&gt;Human Interface Guidelines&lt;/strong&gt;의 약자로 비주얼 적인 디자인 규칙을 설명하고 작업 동작에 대한 설명과 기능적인 설명을 통해 어떤식으로 어플리케이션 개발을 하면 좋은 방식을 추천한 소프웨어 개발 문서입니다. 그 대표적인 예로  &lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;와 &lt;a href=&quot;http://developer.android.com/guide/practices/ui_guidelines/index.html&quot;&gt;Android HIG&lt;/a&gt; 두개가 있습니다. 이번 글에서는 두가지의 HIG 대한 특징에 대해 알아 봅시다.&lt;/p&gt;
+
+&lt;h2&gt;iOS HIG&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;는 iOS의 어플리케이션을 개발하는데 있어서 아주 중요한 문서입니다. 그 이유로는 내용을 보면 기본적으로 어떠한경우 이런식으로 해라 라고 제시해 놓았는데 예를 들자면 액션 시트에서 위험한 버튼은 빨간색으로 표시하고 취소버튼을 맨밑으로 놓아야한다고 명시해 놓았습니다. 그래서 어플리케이션을 Apple Store에서 심사를 할때 &lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;의 내용이 지켜지지 않는다면 리젝 될 수 있기 때문에 &lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;를 꼭 읽고 개발 하셔야합니다.&lt;/p&gt;
+
+&lt;p&gt;그렇다면 간단하게 &lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;의 내용을 살펴보자면 이러합니다.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;플랫폼의 특성&lt;/li&gt;
+&lt;li&gt;휴먼 인터페이스 원칙&lt;/li&gt;
+&lt;li&gt;어플리케이션 디자인 전략&lt;/li&gt;
+&lt;li&gt;iOS로 전환한 어플리케이션 사례&lt;/li&gt;
+&lt;li&gt;사용자 경험 가이드라인&lt;/li&gt;
+&lt;li&gt;iOS 기술 가이드라인&lt;/li&gt;
+&lt;li&gt;iOS UI 요소 가이드라인&lt;/li&gt;
+&lt;li&gt;아이콘과 이미지 가이드라인&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h2&gt;Android HIG&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://developer.android.com/guide/practices/ui_guidelines/index.html&quot;&gt;Android HIG&lt;/a&gt; 또한 개발할때 참고하면 좋습니다. 하지만 플랫폼의 특성이라던지 UI 요소들에 대한 내용 등 약간 내용이 부족하기 때문에 &lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;을 참고해서 보시면 개발하시는데 도움이 되실겁니다.&lt;/p&gt;
+
+&lt;p&gt;그렇다면 간단하게 &lt;a href=&quot;http://developer.android.com/guide/practices/ui_guidelines/index.html&quot;&gt;Android HIG&lt;/a&gt;와 &lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;에 대해 살펴보자면 이러합니다.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;디자인 원칙&lt;/li&gt;
+&lt;li&gt;어플리케이션의 비쥬얼 스타일 가이드 라인&lt;/li&gt;
+&lt;li&gt;Android Ui 패턴 가이드라인&lt;/li&gt;
+&lt;li&gt;아이콘 디자인 가이드라인&lt;/li&gt;
+&lt;li&gt;작업 디자인 가이드라인&lt;/li&gt;
+&lt;li&gt;메뉴 디자인 가이드라인&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;두 HIG의 어플리케이션 디자인 가이드라인 특징&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;휴먼 인터페이스 원칙과 디자인 원칙만 봐서는 &lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;의 경우 유저 사이드한 관점이고 &lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;의 경우 심미적인 원칙을 강조하였습다. 왜냐하면 &lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;는 사용자가 직접 선택해야된다던지 눈으로 보고 선택해야된다는 내용이 대부분 있는 반면에 &lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;의 경우 강력한 화면과 소리로 즐거움을 제공한다거나 단어보다 사진이 더 빠른 아이디어를 제공한다는 내용이 대부분이기 때문입니다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;는 어떻게 개발하면 좋을지에 대한 어플리케이션 디자인 전략을 제공한 반면에 &lt;a href=&quot;http://developer.android.com/guide/practices/ui_guidelines/index.html&quot;&gt;Android HIG&lt;/a&gt;는 좀 더 개발자의 자유에 맡겼습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;두 HIG의 OS 특징&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;는 디바이스들이 한정되어있기 때문에 아이콘이나 레이아웃 등이 일정하다 그러나 Android의 경우 디바이스 해상도가 다 다르고 디스플레이들이 다양하다보니 레이아웃 최적화를 해야합니다. &lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;에서는 이에대한 해결 방법으로 두가지 방법을 제시하였습니다. 기본이 되는 중간 사이즈에서 일정 비율로 높이거나 줄이고 아니면 아예 큰 사이즈의 디스플레이로 시작하여 필요하다면 일정비율로 줄이라고 말합니다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;에서는 ICS로 버전이 업그레이되면서 Holo라는 디자인 테마를 선보였습니다. Android 앱이라면 모두 적용가능하여 비주얼 스타일링을 제공하였습니다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;는 터치 동작에 대해서는 드래그나 대상이 선택됩니다.&lt;br/&gt;
+&lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;에서는 다양한 제스쳐에 대한 가이드라인을 제시하는데 그중 대표적인 예가 바로 오래 누름입니다. 오래 누름을 통해 컨텍스트 메뉴가 나오거나 컨텍스트 액션 바가 사용됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;두 HIG의 UI 요소 특징&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;알림의 경우 둘다 짧은 단어들로 명시하기를 원합니다. 그러나 기술적인 문제나 어떤 설명이 필요한 상황이면 유저에게 충분히 설명해야합니다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;에 경우 알림 버튼이 2개일경우 항상 왼쪽 버튼이 어두운 색이어야하고 오른쪽은 밝은 색이어야합니다. 가끔 사용자가 내용을 읽어보지 않고 버튼을 누르는 경우도 있기 때문에 오른쪽 버튼은 안전한 기본 작업을 수행하도록 만들어야합니다. 위험성을 가진 액션을 제공할 경우 취소버튼을 오른쪽 버튼으로 하여 밝게 해야됩니다. 그렇지않은 온순한 버튼은 왼쪽에 어둡게 배치해야됩니다. 그러나 &lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;에서는 알림 버튼에 이러한 배치와 관련된 언급을 하지않았다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;에서 액션시트는 위에 배치할수록 눈에 잘 띄고 위험성 있는 버튼은 빨간색으로 사용해야 합니다. 그리고 사용자가 가끔 홈버튼을 누르려다 화면의 아래쪽을 누르는 경우가 있으므로 맨아래 버튼은 취소 버튼으로 해야합니다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;의 경우 Action Bar라는 것이 존재하는데 이것은 세가지로 나눠집니다.&lt;br/&gt;
+&lt;img src=&quot;/images/hig/action.png&quot; alt=&quot;list&quot; /&gt; 그 세가지는 1. Main action bar, 2. Top bar, 3. Bottom bar 입니다. 이 세가지는 &lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;의 bar와 비슷한 기능을 수행합니다.&lt;br/&gt;
+&lt;strong&gt;Main action bar&lt;/strong&gt;는 &lt;strong&gt;Navigation bar&lt;/strong&gt;와 비슷하다고 할 수 있습니다. 최소의 액션으로 컨트롤한다는데에 사용된다. 실제로 Android에서 &lt;strong&gt;Navigation bar&lt;/strong&gt;가 따로 존재하지만 의미가 약간다르다 자세한건 뒤에서 다루도록하겠다.&lt;br/&gt;
+&lt;strong&gt;Top bar&lt;/strong&gt;는 iOS의 &lt;strong&gt;Tab bar&lt;/strong&gt;와 비슷한 기능을 하는데 빠르게 뷰의 전환을 할때 사용됩니다.
+&lt;strong&gt;Bottom bar&lt;/strong&gt;는 iOS의 &lt;strong&gt;Tool bar&lt;/strong&gt;와 비슷한 기능을 하는데 디스플레이의 액션을 요구 할때 사용됩니다.
+사실 &lt;strong&gt;Top bar&lt;/strong&gt;와 &lt;strong&gt;Bottom bar&lt;/strong&gt;는 사용에 있어서 구분을 두지않는데 실제로 &lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;에서도 두개를 iOS의 &lt;strong&gt;Tap bar&lt;/strong&gt;와 비교하였습니다. 두개의 경우 기능적으로 저런 차이가 있다는 것을 알아 두시면 좋겠습니다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt;에서 &lt;strong&gt;Navigation bar&lt;/strong&gt;가 따로 있는데 이것은 엄밀히 말하면 &lt;strong&gt;Virtual Navigation bar&lt;/strong&gt;로 예전에 디바이스로 지원을 해주던 기능을 bar형태로 바꾸어 사용하는 것입니다. 따라서 &lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt;의 &lt;strong&gt;Navigation bar&lt;/strong&gt;와 달리 뷰의 이동만 가능하고 뷰 안의 내용을 컨트롤 할 수 없습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;끝&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이번 글에서는 대략적으로 두 종류의 HIG에 대해 다뤄 봤습니다. 실제로 저희 앱에 가이드라인의 내용을 적용하였고 가이드라인에 대한 자세한 내용이 궁금하시면 아래의 링크를 참조해 주시길 바랍니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html&quot;&gt;iOS HIG&lt;/a&gt; : iOS Human Interface Guideline&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.android.com/guide/practices/ui_guidelines/index.html&quot;&gt;Android HIG&lt;/a&gt; : Android Human Interface Guideline&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.android.com/design/index.html&quot;&gt;Android Design&lt;/a&gt; : Android ICS Design&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+      </entry>
+      
+  
+      
+      <entry>
+        <id>http://spoqa.github.com/2012/01/16/wsgi-and-flask</id>
+        <link type="text/html" rel="alternate" href="http://spoqa.github.com/2012/01/16/wsgi-and-flask.html"/>
+        <title>Flask로 만들어 보는 WSGI 어플리케이션</title>
+        <updated>2012-01-16T00:00:00+09:00</updated>
+        <author>
+          <name>문성원</name>
+          <uri>http://spoqa.github.com/2012/01/16/wsgi-and-flask.html</uri>
+        </author>
+        <content type="html">&lt;p&gt;안녕하세요. &lt;a href=&quot;http://spoqa.com&quot;&gt;스포카&lt;/a&gt; 크리에이터팀 문성원입니다. 오늘은 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI(Web Server Gateway Interface)&lt;/a&gt; 어플리케이션을 직접 작성해보고, 또 이런 작성을 보다 쉽게 도와주는 프레임워크 중 하나인 &lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;에 대해서 알아보겠습니다.&lt;/p&gt;
+
+&lt;h1&gt;WSGI&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt;에 대해 기억이 가물하신 분들을 위해 &lt;a href=&quot;http://spoqa.github.com/2011/12/24/about-spoqa-server-stack.html&quot;&gt;지난 글&lt;/a&gt;의 일부를 잠깐 다시 살펴보죠.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;이 경우 &lt;a href=&quot;http://projects.unbit.it/uwsgi&quot;&gt;uwsgi&lt;/a&gt;는 일종의 &lt;strong&gt;어플리케이션 컨테이너(Application Container)&lt;/strong&gt;로 동작하게 됩니다. 적재한 어플리케이션을 실행만 시켜주는 역할이죠. 이러한 &lt;a href=&quot;http://projects.unbit.it/uwsgi&quot;&gt;uwsgi&lt;/a&gt;에 적재할 어플리케이션(스포카 서버)에는 일종의 규격이 존재하는데, 이걸 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt;라고 합니다.(정확히는 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt;에 의해 정의된 어플리케이션을 돌릴 수 있게 설계된 컨테이너가 &lt;a href=&quot;http://projects.unbit.it/uwsgi&quot;&gt;uwsgi&lt;/a&gt;라고 봐야겠지만요.) &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt;는 &lt;a href=&quot;http://python.org/&quot;&gt;Python&lt;/a&gt; 표준(&lt;a href=&quot;http://www.python.org/dev/peps/pep-0333/&quot;&gt;PEP-033&lt;/a&gt;)으로 [HTTP]를 통해 요청을 받아 응답하는 어플리케이션에 대한 명세로 이러한 명세를 만족시키는 클래스나 함수, (&lt;a href=&quot;http://docs.python.org/reference/datamodel.html#object.__call__&quot;&gt;__call__&lt;/a&gt;을 통해 부를 수 있는)객체를 &lt;strong&gt;WSGI 어플리케이션&lt;/strong&gt;이라고 합니다.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;글로는 감이 잘 안오신다구요? 그럼 코드를 보면서 같이 살펴봅시다. (모든 코드는 &lt;a href=&quot;http://python.org/&quot;&gt;Python&lt;/a&gt; 2.7에서 테스트 되었습니다.)&lt;/p&gt;
+
+&lt;h2&gt;Hello World!&lt;/h2&gt;
+
+&lt;script src=&quot;https://gist.github.com/1606034.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;p&gt;&lt;code&gt;app&lt;/code&gt;은 일반적인 &lt;a href=&quot;http://python.org/&quot;&gt;Python&lt;/a&gt; 함수지만, 동시에 WSGI 어플리케이션이기도 합니다. &lt;code&gt;environ&lt;/code&gt;과 &lt;code&gt;start_response&lt;/code&gt;를 받는 함수기 때문이죠.(&lt;a href=&quot;http://www.python.org/dev/peps/pep-0333/#the-application-framework-side&quot;&gt;참고&lt;/a&gt;) 꼭 함수일 필요도 없습니다. 다음은 위의 &lt;code&gt;app&lt;/code&gt;과 동일한 동작을 하는 WSGI 어플리케이션입니다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1606137.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;p&gt;&lt;code&gt;App&lt;/code&gt;는 &lt;a href=&quot;http://python.org/&quot;&gt;Python&lt;/a&gt; 클래스로 &lt;code&gt;environ&lt;/code&gt;과 &lt;code&gt;start_response&lt;/code&gt;를 멤버 변수로 가지는데, 이는 생성자(Constructor)인 &lt;code&gt;App&lt;/code&gt;를 함수처럼 사용하게 하여 &lt;code&gt;__iter__&lt;/code&gt;를 구현한 &lt;a href=&quot;http://docs.python.org/glossary.html#term-iterable&quot;&gt;순회 가능한(Iterable)&lt;/a&gt; 객체를 결과 값으로 사용하게 됩니다. (덤으로 이 객체는 &lt;a href=&quot;http://docs.python.org/glossary.html#term-generator&quot;&gt;발생자(Generator)&lt;/a&gt;를 돌려주게 됩니다.)&lt;/p&gt;
+
+&lt;p&gt;그런데 이 코드들을 실행하려면 어떻게 해야할까요? 그러려면 먼저 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt; 규격에 맞게 어플리케이션을 실행시켜 줄 서버를 작성해야합니다. 하지만 다행히도 &lt;a href=&quot;http://python.org/&quot;&gt;Python&lt;/a&gt; 2.5부터 제공되는 &lt;a href=&quot;http://docs.python.org/library/wsgiref.html#module-wsgiref.simple_server&quot;&gt;&lt;code&gt;wsgiref.simple_server&lt;/code&gt;&lt;/a&gt;를 이용하면 간단히 테스트 해 볼 수 있습니다.(서버를 직접 작성하는 부분에 대해선 나중에 다루도록 하겠습니다.)&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1606870.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;p&gt;위 코드를 실행시킨 후에(당연히 &lt;code&gt;app&lt;/code&gt;도 만들어져 있어야겠죠?) 웹 브라우져를 통해 &lt;code&gt;localhost:8000&lt;/code&gt;으로 접속하면 작성한 어플리케이션의 동작을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;h2&gt;environ과 start_response&lt;/h2&gt;
+
+&lt;p&gt;테스트도 해봤으니 코드를 조금만 더 자세히 살펴보도록 하죠. 함수 버젼의 &lt;code&gt;app&lt;/code&gt;이나 클래스 버젼의 &lt;code&gt;App&lt;/code&gt; 모두 공통적으로 &lt;code&gt;environ&lt;/code&gt;과 &lt;code&gt;start_response&lt;/code&gt;를 인자로 받아 요청을 처리하는 것을 확인할 수 있습니다. (당연한 이야기겠지만, 반드시 이름이 &lt;code&gt;environ&lt;/code&gt;이나 &lt;code&gt;start_response&lt;/code&gt;일 필요는 없습니다만 편의상 이후 계속 &lt;code&gt;environ&lt;/code&gt;과 &lt;code&gt;start_response&lt;/code&gt;로 표기하겠습니다.)&lt;/p&gt;
+
+&lt;p&gt; 하나씩 살펴보자면, &lt;code&gt;environ&lt;/code&gt;은 Python &lt;a href=&quot;http://docs.python.org/library/stdtypes.html#typesmapping&quot;&gt;딕셔너리(dictionary)&lt;/a&gt;로 HTTP 요청을 처리하는데 필요한 정보가 저장되어있습니다. HTTP 요청에 대한 정보는 물론, O/S나 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt; 서버의 설정 등도 &lt;a href=&quot;http://www.python.org/dev/peps/pep-0333/#environ-variables&quot;&gt;정의&lt;/a&gt;되어있지요. 다음 코드는 이러한 &lt;code&gt;environ&lt;/code&gt;의 내용을 응답으로 주게끔 수정한 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt; 어플리케이션입니다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1615142.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;p&gt;&lt;code&gt;localhost:8000&lt;/code&gt;에 각종 쿼리 스트링(Query String)을 붙이거나, 브라우져를 바꿔가면서 확인해보면 출력되는 값이 바뀌는 것을 확인하실 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그럼 이제 &lt;code&gt;start_response&lt;/code&gt;를 한번 볼까요. &lt;code&gt;start_response&lt;/code&gt;는 일종의 콜백(Callback)으로 인터페이스는 다음과 같습니다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    start_response(status, response_headers, exc_info=None) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;실제 서버에서 어플리케이션으로부터 응답(Response)의 상태(Status)와 헤더(Header), 그리고 예외(Exception)의 유무를 확인받아 실행하는 역할을 합니다. &lt;code&gt;status&lt;/code&gt;와 &lt;code&gt;response_headers&lt;/code&gt;는 &lt;a href=&quot;http://tools.ietf.org/html/rfc2616&quot;&gt;HTTP 응답 명세&lt;/a&gt;에 근거하여 작성하게 됩니다.&lt;/p&gt;
+
+&lt;h2&gt;Middleware&lt;/h2&gt;
+
+&lt;p&gt;지금까지 우리는 어떻게 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt; 어플리케이션을 작성하는지에 대해 살펴봤습니다. 요청을 받아 처리하는 HTTP의 기본 기능에 충실한 어플리케이션이었죠. 그런데 일반적으로 우리가 작성하는 웹 어플리케이션에서 주로 다루게 되는 쿠키(Cookie), 세션(Session)에 대해서는 어떻게 처리해야 좋을까요? &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt; 명세에는 이러한 내용을 직접적으로 다루고 있지 않습니다. &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt; 자체는 서버나 프레임워크 자체가 아니라 서버가 어플리케이션과 통신하는 명세를 다루고 있기 때문이죠. 따라서 이러한 기능은 작성자가 직접 이를 구현해야 합니다. 그런데 이런 구현을 어플리케이션을 작성할때마다 하는건 너무 번거로운 일입니다. 그것보다는 이미 작성한 어플리케이션을 확장하는 것이 간단하겠지요. 이러한 확장을 위해 필요한 것이 WSGI 미들웨어(Middleware)입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/middleware.jpg&quot; width=&quot;400&quot; alt=&quot;list&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;미들웨어는 어플리케이션을 처리하기 전후의 처리나 &lt;code&gt;environ&lt;/code&gt;의 추가등을 통해 작성된 어플리케이션을 확장할 수 있습니다. 다음은 쿼리 스트링의 &lt;code&gt;__method__&lt;/code&gt;에 따라 HTTP 메소드(Method)를 임의로 변경하는 처리를 도와주는 간단한 미들웨어입니다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1616103.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;p&gt;&lt;code&gt;MethodRewriteMiddleware&lt;/code&gt;는 &lt;code&gt;__call__&lt;/code&gt;를 통해 &lt;code&gt;app&lt;/code&gt;을 대체하게 됩니다. (&lt;a href=&quot;http://www.python.org/dev/peps/pep-0318/&quot;&gt;데코레이터(Decorator)&lt;/a&gt;가 생각나셨다면 정확한 이해십니다.)&lt;/p&gt;
+
+&lt;h1&gt;Flask&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;미들웨어를 통해 어플리케이션을 확장하는 방법까지 알아봤습니다. 그러나 이것만 가지고 웹 어플리케이션을 만들기에는 아직 귀찮은 부분이 많이 남아있습니다. 각종 파라미터를 처리하기 위해서는 &lt;code&gt;environ&lt;/code&gt;를 일일히 뒤져야하며, 요청에 대한 응답으로 전달할 HTML도 일일히 문자열로 적어야하죠. 이런 여러가지 불편함을 해결하기 위해 알아볼 것이 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt; 마이크로프레임워크를 자처하는 &lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;입니다. &lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;는 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt; 라이브러리인 &lt;a href=&quot;http://werkzeug.pocoo.org/&quot;&gt;Werkzeug&lt;/a&gt;를 만들기도 한 &lt;a href=&quot;http://lucumr.pocoo.org/about/&quot;&gt;Armin Ronacher&lt;/a&gt;가 만든 프레임워크로 &quot;마이크로&quot;라는 수식어에 어울리게 아주 핵심적인 부분만을 구현하고 있지만, 유연하게 확장이 가능하게 설계된 것이 특징입니다.&lt;/p&gt;
+
+&lt;h2&gt;다시 한번 Hello World!&lt;/h2&gt;
+
+&lt;p&gt;우선 &lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;를 시스템에 설치해야하는데, &lt;a href=&quot;http://pypi.python.org/pypi/pip&quot;&gt;pip&lt;/a&gt;가 설치되어있다면 &lt;code&gt;pip install flask&lt;/code&gt;로 설치 가능합니다.(환경에 따라 루트(root)권한이 필요할 수도 있습니다.) [easy_install]의 경우도 마찬가지로 &lt;code&gt;easy_install flask&lt;/code&gt;로 설치 가능합니다.&lt;/p&gt;
+
+&lt;p&gt;설치가 완료되었으면 다음과 같이 아주 간단한 어플리케이션을 작성해봅시다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1616212.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;(정확히는 &lt;a href=&quot;http://werkzeug.pocoo.org/&quot;&gt;Werkzeug&lt;/a&gt;)는 테스트를 위해 간단한 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt; 서버를 자체 내장하고 있기 때문에 &lt;a href=&quot;http://flask.pocoo.org/docs/api/#flask.Flask.run&quot;&gt;&lt;code&gt;app.run&lt;/code&gt;&lt;/a&gt;을 통해 어플리케이션을 직접 내장 서버에서 실행할 수 있습니다.&lt;/p&gt;
+
+&lt;h2&gt;Route&lt;/h2&gt;
+
+&lt;p&gt;이번에 작성한 Flask 어플리케이션에는 이전까지 보지 못하던 개념이 들어가있습니다. &lt;a href=&quot;http://flask.pocoo.org/docs/api/#flask.Flask.route&quot;&gt;&lt;code&gt;app.route&lt;/code&gt;&lt;/a&gt;가 바로 그것인데요. 이 메서드는 &lt;a href=&quot;http://ko.wikipedia.org/wiki/URL&quot;&gt;URL&lt;/a&gt; 규칙을 받아 해당하는 규칙의 URL로 요청이 들어온 경우 등록한 함수를 실행하게끔 설정합니다. 위의 Hello World! 예제 같은 경우엔 &quot;/&quot;가 해당되겠지요. 또한 이런 규칙에는 변수도 설정할 수 있습니다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1616249.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;p&gt;이렇게 URL과 처리할 핸들러를 매치하는 것을 일반적으로 URL 라우팅(Routing)이라고 합니다. 이런 URL 라우팅에서 중요한 기능 중 하나가 핸들러에서 해당하는 URL을 생성하는 기능인데, &lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;는 이를 &lt;a href=&quot;http://flask.pocoo.org/docs/api/#flask.url_for&quot;&gt;&lt;code&gt;url_for&lt;/code&gt;&lt;/a&gt; 메서드를 통해 지원합니다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1616290.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;p&gt;보다 자세한 사항은 &lt;a href=&quot;http://flask.pocoo.org/docs/api/#url-route-registrations&quot;&gt;API 문서&lt;/a&gt;를 참고하실 수 있습니다.&lt;/p&gt;
+
+&lt;h2&gt;Template&lt;/h2&gt;
+
+&lt;p&gt;여태까지 우리는 요청에 대한 응답으로 단순한 문자열을 사용했습니다. 하지만 일반적인 웹 어플리케이션의 응답은 대부분이 그것보다 훨씬 복잡하지요. 이를 보다 쉽게 작성할 수 있게끔 도와주는 것이 바로 &lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;의 &lt;a href=&quot;http://flask.pocoo.org/docs/templating/&quot;&gt;템플릿(Template)&lt;/a&gt;입니다. &lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;는 기본 템플릿 엔진으로 (역시 &lt;a href=&quot;http://lucumr.pocoo.org/about/&quot;&gt;Armin Ronacher&lt;/a&gt;가 작성한)[Jinja2]를 사용합니다.&lt;/p&gt;
+
+&lt;p&gt;기본적으로 템플릿엔진은 별도의 규칙(여기서는 [Jinja2])에 맞게 작성된 템플릿 파일을 읽어 환경(Context)에 맞게 적용한 결과물을 돌려주는데 이 과정을 &lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;에서는 &lt;a href=&quot;&quot;&gt;&lt;code&gt;render_template&lt;/code&gt;&lt;/a&gt;가 담당하고 있습니다. 다음 코드는 &lt;code&gt;hello.html&lt;/code&gt;이라는 템플릿 파일을 읽어서 이름을 적용한 뒤에 돌려주는 코드입니다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1616379.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;p&gt;쉽게 작성할 수 있게 도와준다고해도, 템플릿 역시 나름의 학습을 필요로 합니다. 자세한 사항은 &lt;a href=&quot;http://jinja.pocoo.org/docs/api/&quot;&gt;Jinja2의 API 문서&lt;/a&gt;를 참고하시기 바랍니다.&lt;/p&gt;
+
+&lt;h2&gt;Request&lt;/h2&gt;
+
+&lt;p&gt;HTTP 요청을 다루기 위해서 때로는 &lt;code&gt;environ&lt;/code&gt;의 내용은 너무 원시적일때가 있습니다. HTML 폼(Form)으로부터 입력받는 값이 좋은 예인데요. &lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;에서는 &lt;a href=&quot;http://flask.pocoo.org/docs/api/#flask.request&quot;&gt;&lt;code&gt;request&lt;/code&gt;&lt;/a&gt;라는 객체(역시 &lt;a href=&quot;http://werkzeug.pocoo.org/&quot;&gt;Werkzeug&lt;/a&gt;에서 가져다가쓰는 거지만요)를 통해 이를 보다 다루기 쉽게 해줍니다. 다음은 HTML 폼으로부터 입력받은 &lt;code&gt;message&lt;/code&gt;라는 값을 뒤집어서 출력하는 코드입니다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1616333.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;h2&gt;Session&lt;/h2&gt;
+
+&lt;p&gt;로그인등으로 대표되는 요청간의 상태를 유지해야하는 처리에 흔히 세션(Session)을 사용하실 겁니다. &lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;에서는 &lt;a href=&quot;http://flask.pocoo.org/docs/api/#flask.session&quot;&gt;&lt;code&gt;session&lt;/code&gt;&lt;/a&gt;객체를 지원합니다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1616353.js&quot;&gt; &lt;/script&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://flask.pocoo.org&quot;&gt;Flask&lt;/a&gt;는 기본적으로 시큐어 쿠키(Secure Cookie)를 통해 세션을 구현하는데 길이에 제한이 있습니다. 때문에 파일이나 DB기반의 세션을 구현하려면 &lt;a href=&quot;http://beaker.readthedocs.org/en/latest/index.html&quot;&gt;Beaker&lt;/a&gt;와 같은 프레임워크를 통한 확장이 필요합니다.(하지만 이 또한 매우 쉽습니다.)&lt;/p&gt;
+</content>
+      </entry>
+      
+  
+      
+      <entry>
+        <id>http://spoqa.github.com/2012/01/09/using-gson-in-android</id>
+        <link type="text/html" rel="alternate" href="http://spoqa.github.com/2012/01/09/using-gson-in-android.html"/>
+        <title>Java의 json 라이브러리 google-gson</title>
+        <updated>2012-01-09T00:00:00+09:00</updated>
+        <author>
+          <name>akaz</name>
+          <uri>http://spoqa.github.com/2012/01/09/using-gson-in-android.html</uri>
+        </author>
+        <content type="html">&lt;h2&gt;문제 상황&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;안드로이드 어플리케이션을 개발하다 보면 주소록을 다루는 일이 종종 있습니다. 어플리케이션에서 주소록에 관련된 정보를 접근할 일이 있는 어플이라면 &lt;a href=&quot;http://developer.android.com/reference/android/content/ContentResolver.html&quot;&gt;ContentResolver&lt;/a&gt;를 통해 단말의 주소록에 접근해서 필요한 정보를 가져오게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;그런데, 최근 개발하고 있는 &lt;a href=&quot;http://spo.qa/get&quot;&gt;스포카&lt;/a&gt; 어플을 통해 아주 많은 사람의 연락처가 저장된 주소록을 가지고 이런 저런 로직을 실행하는 상황을 테스트 하다보니, &lt;a href=&quot;http://developer.android.com/reference/java/lang/OutOfMemoryError.html&quot;&gt;OutOfMemory(OOM)&lt;/a&gt;에러가 발생하는 현상을 볼 수 있었습니다. 모바일 디바이스들은 PC와 다르게 자원이 제한적이기 때문에 어떻게 하면 &lt;a href=&quot;http://developer.android.com/reference/java/lang/OutOfMemoryError.html&quot;&gt;OOM&lt;/a&gt;을 일으키지 않을 수 있을까 라는 고민을 해야 하는 상황이었습니다.&lt;/p&gt;
+
+&lt;p&gt;대강 문제가 되었던 클라이언트 사이드의 로직을 살펴보면 이렇습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;단말의 주소록에 접근하여 필요한 정보를 추출 후 서버에 전송&lt;/li&gt;
+&lt;li&gt;서버에서 정보를 가공하여 필요한 &lt;a href=&quot;http://www.json.org&quot;&gt;json&lt;/a&gt; 문자열을 생성 후 반환, 이 문자열은 주소록에서 보낸 정보의 양에 비례해서 늘어나게 됩니다.&lt;/li&gt;
+&lt;li&gt;클라이언트 측에서 서버 측에서 보낸 &lt;a href=&quot;http://www.json.org&quot;&gt;json&lt;/a&gt; 문자열을 이용하여 &lt;a href=&quot;http://developer.android.com/reference/org/json/JSONObject.html&quot;&gt;JSONObject&lt;/a&gt;객체를 만든 후 이 &lt;a href=&quot;http://developer.android.com/reference/org/json/JSONObject.html&quot;&gt;JSONObject&lt;/a&gt;를 이용 리스트 완성&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;&lt;a href=&quot;http://www.eclipse.org&quot;&gt;eclipse&lt;/a&gt;의 &lt;a href=&quot;http://eclipse.org/mat/&quot;&gt;MAT(Memory Analyzer)&lt;/a&gt;을 이용하여 어느 시점에서 &lt;a href=&quot;http://developer.android.com/reference/java/lang/OutOfMemoryError.html&quot;&gt;OOM&lt;/a&gt;이 일어나는지를 추측해보았습니다. 서버에서 보내준 &lt;a href=&quot;http://www.json.org&quot;&gt;json&lt;/a&gt;형식의 문자열을 &lt;a href=&quot;http://developer.android.com/reference/java/net/HttpURLConnection.html&quot;&gt;HttpURLConnection&lt;/a&gt;을 통해 전달받고 이를 &lt;a href=&quot;http://developer.android.com/reference/java/lang/StringBuilder.html&quot;&gt;StringBuilder&lt;/a&gt;를 이용하여 완전한 문자열으로 만들던 도중에 &lt;a href=&quot;http://developer.android.com/reference/java/lang/OutOfMemoryError.html&quot;&gt;OOM&lt;/a&gt;이 일어나는 것으로 의심되었는데 이 때문에 &lt;a href=&quot;http://developer.android.com/reference/org/json/JSONObject.html&quot;&gt;JSONObject&lt;/a&gt;의 생성자에 &lt;a href=&quot;http://www.json.org&quot;&gt;json&lt;/a&gt; 문자열을 전달하기도 전에 메모리가 가득 차 버리니 매우 난감한 상황이었습니다.&lt;/p&gt;
+
+&lt;p&gt;대게 주소록에 사람이 그렇게 많지 않으므로 (200~500명 정도) 아무런 문제가 없었지만 10000명 정도의 더미데이터를 주소록에 저장하고 테스트하다 보니 append 메서드를 호출하다 &lt;a href=&quot;http://developer.android.com/reference/java/lang/OutOfMemoryError.html&quot;&gt;OOM&lt;/a&gt;에러를 뱉으면서 어플이 종료되었습니다. 문제는 append 메서드를 호출 시 &lt;a href=&quot;http://developer.android.com/reference/java/lang/StringBuilder.html&quot;&gt;StringBuilder&lt;/a&gt;의 capacity를 넘을 경우 내부적으로는 메모리 재할당과 copy과정이 일어난다는 것이었습니다. 그렇다고 초기 &lt;a href=&quot;http://developer.android.com/reference/java/lang/StringBuilder.html&quot;&gt;StringBuilder&lt;/a&gt;생성시 capacity를 무작정 높게 잡기도 애매한 상황이었습니다.&lt;/p&gt;
+
+&lt;h2&gt;gson&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://code.google.com/p/google-gson/&quot;&gt;gson&lt;/a&gt;은 Java객체를 &lt;a href=&quot;http://www.json.org&quot;&gt;json&lt;/a&gt;형식으로 변환하고 그 역으로도 변환할 수 있도록 도와주는 라이브러리입니다. &lt;a href=&quot;http://code.google.com/p/google-gson/&quot;&gt;gson&lt;/a&gt;의 사용법이 궁금하다면 &lt;a href=&quot;https://sites.google.com/site/gson/gson-user-guide&quot;&gt;gson user guide&lt;/a&gt;를 읽어보면 되고 api가 궁금하다면 &lt;a href=&quot;http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/index.html&quot;&gt;gson api document&lt;/a&gt;를 참조하면 됩니다.&lt;/p&gt;
+
+&lt;h2&gt;gson 적용&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;script src=&quot;https://gist.github.com/1580601.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;대략 이런 방식으로 프로젝트에 &lt;a href=&quot;http://code.google.com/p/google-gson/&quot;&gt;gson&lt;/a&gt;라이브러리를 적용하였고, &lt;a href=&quot;http://developer.android.com/reference/java/net/HttpURLConnection.html&quot;&gt;HttpURLConnection&lt;/a&gt;을 통해 받아온 &lt;a href=&quot;http://developer.android.com/reference/java/io/InputStream.html&quot;&gt;InputStream&lt;/a&gt;을 이용 바로 객체를 생성할 수 있었습니다. 이전에 &lt;a href=&quot;http://developer.android.com/reference/java/lang/StringBuilder.html&quot;&gt;StringBuilder&lt;/a&gt;를 이용할때 생기는 오버헤드가 사라진 셈이죠. 위와 같은 방식으로 &lt;a href=&quot;http://developer.android.com/reference/java/lang/OutOfMemoryError.html&quot;&gt;OOM&lt;/a&gt;이 생기는 문제 상황을 해결 할 수 있었습니다.&lt;/p&gt;
+
+&lt;p&gt;위의 예는 상황을 최대한 단순화하여 설명하려고 작성한 예제이고 이 &lt;a href=&quot;http://www.softwarepassion.com/android-series-parsing-json-data-with-gson/&quot;&gt;사이트&lt;/a&gt;를 통해 더 상세하게 설명된 사용예를 보실 수 있습니다.&lt;/p&gt;
+</content>
+      </entry>
+      
+  
+      
+      <entry>
+        <id>http://spoqa.github.com/2012/01/02/trello</id>
+        <link type="text/html" rel="alternate" href="http://spoqa.github.com/2012/01/02/trello.html"/>
+        <title>트렐로를 소개합니다.</title>
+        <updated>2012-01-02T00:00:00+09:00</updated>
+        <author>
+          <name>shinvee</name>
+          <uri>http://spoqa.github.com/2012/01/02/trello.html</uri>
+        </author>
+        <content type="html">&lt;p&gt;스포카 개발팀은 &lt;a href=&quot;http://ko.wikipedia.org/wiki/%EC%8A%A4%ED%81%AC%EB%9F%BC_(%EC%95%A0%EC%9E%90%EC%9D%BC_%EA%B0%9C%EB%B0%9C_%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4)&quot;&gt;스크럼&lt;/a&gt;을 통해 프로젝트를 진행하고 있습니다. 기본적인 최종 릴리즈 주기는 30일로 운영되고 있기 때문에 매월 말/초에 새 버전을 업데이트하고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;좋은 도구가 있으면 스크럼을 효과적으로 진행할 수 있습니다. 저희 개발팀은 효과적인 스크럼을 위해 여러가지 서비스를 이용해왔었고, 최근에 &lt;a href=&quot;https://trello.com/&quot;&gt;트렐로&lt;/a&gt;로 정착하게 되었습니다. 이번 글에선 트렐로에 대해 소개하고 저희가 트렐로를 이용해서 어떻게 스크럼을 효과적으로 운영하고 있는지에 대해 소개해보겠습니다.&lt;/p&gt;
+
+&lt;h2&gt;트렐로?&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://d2k1ftgv7pobq7.cloudfront.net/images/9d8795cf7b8927d789cdabe9c8e5ef41/logo-blue-lg.png&quot; width=&quot;400&quot; alt=&quot;Trello&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://trello.com/&quot;&gt;트렐로&lt;/a&gt;는 조엘 온 소프트웨어로 유명한 &lt;a href=&quot;http://www.joelonsoftware.com/&quot;&gt;조엘 스폴스키&lt;/a&gt;가 운영 중인 &lt;a href=&quot;http://www.fogcreek.com/&quot;&gt;FogCreek&lt;/a&gt;에서 최근 출시한 협업 툴입니다. 화이트보드에 포스트잇으로 이슈를 관리하는 모습을 빼어닮은 이 툴은 개발 현황을 한 눈에 파악하고 하나의 카드를 포스트잇보다 더욱 스마트한 방법으로 관리할 수 있다는 것이 장점입니다. 아래 영상을 감상해보세요.&lt;/p&gt;
+
+&lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/aaDf1RqeLfo?feature=player_embedded&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;h2&gt;적합했던 이유&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;스포카 개발팀이 개발흐름에 맞는 협업 툴을 선택하는 데엔 많은 고민이 있었고 그렇기 때문에 여러번 변경을 해야만 했습니다. 저희가 협업툴에서 원하는 것들은 아래와 같았습니다.&lt;/p&gt;
+
+&lt;h3&gt;상태별 추적이 가능해야 한다.&lt;/h3&gt;
+
+&lt;p&gt;당장 정해지지 않아도 문제를 일단 써놓을 수 있어야 하고, 한번 끝난 작업이다 하더라도 테스트 여부를 체크할 수 있어야 합니다. 단순히 TODO 리스트만을 써야 한다면, 해결책이 정해지지 않은 단순한 문제를 기록하는 것이 난감하게 됩니다. 사용자가 느끼는 모든 문제는 어떠한 방식으로든 해결이 되어야 하기 때문에, 문제부터 완료까지 체계적으로 처리해나갈 수 있어야 합니다.&lt;/p&gt;
+
+&lt;h3&gt;여러 디바이스에서 활용할 수 있어야 한다.&lt;/h3&gt;
+
+&lt;p&gt;팀원은 모두 스마트폰을 이용하고 있으며, 영업 업무를 수행하고 계신 분들은 평소에 아이패드로 업무를 보고 계셨습니다. PC에서뿐만 아니라 각종 상황에서 나타나는 문제나 상황 진행에 대해 기록하고 공유할 수 있어야 했습니다. 몇몇 서비스들은 기능이 마이너하게 제공되는 모바일 버전만을 제공하거나 아예 PC에서의 접근만 허용하고 있기 때문에 이에 맞는 서비스를 찾는 일 또한 어려운 일이었습니다.&lt;/p&gt;
+
+&lt;h3&gt;구글 앱스 계정을 이용할 수 있어야 한다.&lt;/h3&gt;
+
+&lt;p&gt;중요하지 않다고 볼 수도 있지만, 스포카 팀은 각종 그룹 활동을 구글 앱스 계정을 중심으로 이용하고 있습니다. 서비스 관리자 기능도 구글 앱스 계정을 이용하게 개발했고, 특정 그룹 웨어를 위해 새로운 계정을 외워야 한다면 아주 귀찮은 일일 것입니다.&lt;/p&gt;
+
+&lt;p&gt;트렐로는 위의 문제를 모두 해결하면서도 직교적으로 활용할 수 있는 유용한 기능들을 필요한 만큼 가지고 있었습니다. 스포카 팀은 3~4가지 협업툴을 옮겨쓰다 트렐로로 정착하였고, 현재 6개월 정도 변동없이 안정적으로 이용하고 있습니다.&lt;/p&gt;
+
+&lt;h2&gt;활용 방법&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;다음은 스포카 팀이 트렐로를 어떻게 세팅하여 활용하는 지를 설명해보겠습니다. 다른 팀에서 이용할 때 좋은 참고가 되었으면 좋겠습니다.&lt;/p&gt;
+
+&lt;h3&gt;리스트는 문제, 리서치, 개발, 테스트, 완료 5단계로 나눈다.&lt;/h3&gt;
+
+&lt;p&gt;리스트를 왼쪽부터 순서대로 문제, 리서치, 개발, 테스트, 완료로 배치하였습니다. 각 단계는 다음과 같이 활용하고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/trello/1.png&quot; width=&quot;700&quot; alt=&quot;list&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;문제:&lt;/strong&gt; 말그대로 문제라고 보여지는 것들을 모두 기록해둡니다. 해결책은 없어도 좋습니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;리서치:&lt;/strong&gt; 해당 문제를 어떠한 방식으로 해결할 지를 고민하는 단계입니다. 이 단계에서 우리는 무엇을 고쳐야 할 지, 무엇을 새로 만들어야 할 지에 대해 점검합니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;개발:&lt;/strong&gt; 리서치가 끝난 것들은 개발로 넘어옵니다. 주어진 요구사항을 체크리스트화시키고 하나씩 구현해나갑니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;테스트:&lt;/strong&gt; 개발이 끝난 것들이 옵니다. 모든 개발 완료 항목은 테스트 단계를 거친 후에야 완료로 넘어갑니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;완료:&lt;/strong&gt; 테스트도 끝나면 완료로 넘어갑니다. 완료 이후에 더 볼 것이 없다면 아카이브하고, 좀 더 지켜볼만한 이슈라면 완료상태에서 계속 상황을 지켜봅니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;무조건 문제에서만 카드가 시작될 필요는 없으며, 테스트 사항이 갑자기 생기거나 개발할 것이 명확하다면 해당 리스트에 카드를 바로 만들기도 합니다.&lt;/p&gt;
+
+&lt;h3&gt;어떤 것이든 문제가 발견되면 문제 리스트에 기록한다.&lt;/h3&gt;
+
+&lt;p&gt;스포카 팀 전원은 트렐로에 기록을 할 권한이 있습니다. &lt;a href=&quot;http://www.alistapart.com/articles/responsive-web-design/&quot;&gt;Responsive Design&lt;/a&gt;이 적용된 트렐로 서비스는 어떤 디바이스에서도 기존 서비스와 동일한 수준의 기능을 보장해주기 때문에, 언제 어디서든 누구나 스포카 서비스에 관련된 문제가 발견되거나 보고되면 즉시 문제 항목에 카드를 만들어두거나, 진행중인 카드의 위치를 바꾸고, 새로운 내용을 추가해둡니다.&lt;/p&gt;
+
+&lt;p&gt;문제에 대해 작성을 하려는데 이미 같은 문제가 보고 되어있으면 Vote를 해둡니다. Vote 수가 높은 카드는 다음 주 작업 일정 배분에서 우선순위를 가지게 됩니다.&lt;/p&gt;
+
+&lt;h3&gt;금주의 할 일은 라벨로 지정한다.&lt;/h3&gt;
+
+&lt;p&gt;스포카팀의 업무 분배는 매 스크럼의 목표에 맞춰서 매주 월요일에 업무 할당을 하고, 금요일까지 해당 업무를 진행하는 것으로 하고 있습니다. 주로 &lt;strong&gt;문제/리서치&lt;/strong&gt; 정도 위치에 있는 일들을 할당하여 이를 금요일까지 완료로 끌고가는 형식이 되는데요.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/trello/2.png&quot; alt=&quot;list&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;금주의 할 일은 이렇게 초록색 라벨로 지정하고 있습니다. 전체 뷰에서도 직관적으로 이번 주에 진행되는 일들의 현황에 대해 파악이 가능하며, 필터 기능을 이용하여 개개의 현황을 보거나 내 일들을 편하게 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/trello/4.png&quot; alt=&quot;list&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;이렇게 선택하면 Jc Kim이 이번 주에 할 일만 보이게 됩니다. 같은 방식으로 다른 동료들의 업무도 바로 파악이 가능합니다.&lt;/p&gt;
+
+&lt;h2&gt;어떤가요?&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이렇게 트렐로는 리스트, 라벨, 필터 등의 센스 있는 기능들과, Responsive Design을 차용한 서비스 인터페이스를 이용해서 프로젝트 개발 흐름에 적합한 애플리케이션을 제공하고 있습니다. 새로 스타트업을 시작하시거나, 기존의 솔루션이 마음에 안든다면 적극 권장드립니다.&lt;/p&gt;
+</content>
+      </entry>
+      
+  
+      
+      <entry>
+        <id>http://spoqa.github.com/2011/12/24/about-spoqa-server-stack</id>
+        <link type="text/html" rel="alternate" href="http://spoqa.github.com/2011/12/24/about-spoqa-server-stack.html"/>
+        <title>스포카 서버의 구조</title>
+        <updated>2011-12-24T00:00:00+09:00</updated>
+        <author>
+          <name>문성원</name>
+          <uri>http://spoqa.github.com/2011/12/24/about-spoqa-server-stack.html</uri>
+        </author>
+        <content type="html">&lt;p&gt;안녕하세요. &lt;a href=&quot;http://spoqa.github.com&quot;&gt;스포카 개발팀&lt;/a&gt;에서 서버 관련 개발 업무를 담당하고 있는 문성원입니다. 오늘은 스포카 서버의 구조와 사용된 기술들에 대해서 함께 살펴보겠습니다.&lt;/p&gt;
+
+&lt;h1&gt;스택이란?&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;먼저 스택(Stack)이란 용어에 대해서 함께 생각해보죠. 컴퓨터 과학을 공부하신 분들이라면 선입후출(FILO)이나 스택 오버플로우(Stack Overflow)등의 개념으로 익숙하실만한 용어기도 합니다. 그런데 서버 구조를 설명한다면서 왠 스택이냐구요? 다행히(?)도 지금부터 살펴 볼 스택은 &lt;a href=&quot;http://en.wikipedia.org/wiki/Solution_stack&quot;&gt;솔루션 스택(Solution Stack)&lt;/a&gt;입니다. 스포카 서버라는 큰 솔루션이 원활히 동작하기 위해서 쓰이고 있는 각종 서브 시스템과 컴포넌트들의 묶음을 이야기하는 것으로 바꿔말하자면 이 글에서 다룰 기술 이야기는 모두 이 스택에 관한 이야기입니다.&lt;/p&gt;
+
+&lt;p&gt;2011년 12월 현재 스포카 서버를 구성하고 있는 스택은 다음과 같습니다.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://dotcloud.com&quot;&gt;Dotcloud&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/torvalds/linux&quot;&gt;Linux&lt;/a&gt; 2.6.38.2&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://nginx.org&quot;&gt;nginx&lt;/a&gt; 0.8.53&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://projects.unbit.it/uwsgi&quot;&gt;uwsgi&lt;/a&gt; 0.9.8.5&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://python.org/&quot;&gt;Python&lt;/a&gt; 2.6.5&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://redis.io/&quot;&gt;Redis&lt;/a&gt; 2.2.2&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://celeryproject.org&quot;&gt;Celery&lt;/a&gt; 2.2.7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://aws.amazon.com/rds/&quot;&gt;Amazon Relational Database Service&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.mysql.com/&quot;&gt;MySQL&lt;/a&gt; 5.5.12&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;Amazon Simple Storage Service&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h1&gt;&lt;a href=&quot;http://dotcloud.com&quot;&gt;Dotcloud&lt;/a&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dotcloud.com&quot;&gt;Dotcloud&lt;/a&gt;는 지금부터 설명드릴 스택을 묶어서 제공해주는 &lt;a href=&quot;http://en.wikipedia.org/wiki/Platform_as_a_service&quot;&gt;PaaS(Platform as a Service)&lt;/a&gt;의 일종입니다. &lt;a href=&quot;http://aws.amazon.com/ec2/&quot;&gt;Amazon Elastic Cloud Computing(Amazon EC2)&lt;/a&gt; 기반으로 동작하며 거기에 더해 &lt;strong&gt;손쉬운 확장과 배포&lt;/strong&gt;가 장점입니다. 스포카 서버는 데이터베이스(&lt;a href=&quot;http://aws.amazon.com/rds/&quot;&gt;Amazon RDS&lt;/a&gt;)와 업로드되는 데이터(&lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;Amazon S3&lt;/a&gt;) 이외의 모든 서비스를 &lt;a href=&quot;http://dotcloud.com&quot;&gt;Dotcloud&lt;/a&gt;를 통하여 제공하고 있습니다.&lt;/p&gt;
+
+&lt;h1&gt;&lt;a href=&quot;http://nginx.org&quot;&gt;nginx&lt;/a&gt;, &lt;a href=&quot;http://projects.unbit.it/uwsgi&quot;&gt;uwsgi&lt;/a&gt;. 그리고 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;기본적으로 스포카 서버는 &lt;a href=&quot;http://www.w3.org/Protocol&quot;&gt;HTTP&lt;/a&gt; 형식의 요청을 받아 응답을 돌려주는 웹 어플리케이션입니다. 이러한 처리는 1차적으로 &lt;a href=&quot;http://nginx.org&quot;&gt;nginx&lt;/a&gt;를 통해 이뤄지는데, 이 중 서버사이드에서 처리가 필요한 경우에는 &lt;a href=&quot;http://projects.unbit.it/uwsgi&quot;&gt;uwsgi&lt;/a&gt;라는 데몬이 이 처리를 담당합니다. (구버젼의 &lt;a href=&quot;http://tomcat.apache.org/&quot;&gt;Apache Tomcat&lt;/a&gt;을 사용하시던 &lt;a href=&quot;http://www.java.com/&quot;&gt;Java&lt;/a&gt; 개발자분들은 &lt;a href=&quot;http://tomcat.apache.org/&quot;&gt;Apache Tomcat&lt;/a&gt;과 &lt;a href=&quot;http://httpd.apache.org/&quot;&gt;Apache httpd&lt;/a&gt;와의 관계를 떠올리시면 편합니다.)&lt;/p&gt;
+
+&lt;p&gt;이 경우 &lt;a href=&quot;http://projects.unbit.it/uwsgi&quot;&gt;uwsgi&lt;/a&gt;는 일종의 &lt;strong&gt;어플리케이션 컨테이너(Application Container)&lt;/strong&gt;로 동작하게 됩니다. 적재한 어플리케이션을 실행만 시켜주는 역할이죠. 이러한 &lt;a href=&quot;http://projects.unbit.it/uwsgi&quot;&gt;uwsgi&lt;/a&gt;에 적재할 어플리케이션(스포카 서버)에는 일종의 규격이 존재하는데, 이걸 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt;라고 합니다.(정확히는 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt;에 의해 정의된 어플리케이션을 돌릴 수 있게 설계된 컨테이너가 &lt;a href=&quot;http://projects.unbit.it/uwsgi&quot;&gt;uwsgi&lt;/a&gt;라고 봐야겠지만요.) &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt;는 &lt;a href=&quot;http://python.org/&quot;&gt;Python&lt;/a&gt; 표준(&lt;a href=&quot;http://www.python.org/dev/peps/pep-0333/&quot;&gt;PEP-033&lt;/a&gt;)으로 &lt;a href=&quot;http://www.w3.org/Protocol&quot;&gt;HTTP&lt;/a&gt;를 통해 요청을 받아 응답하는 어플리케이션에 대한 명세로 이러한 명세를 만족시키는 클래스나 함수, (&lt;a href=&quot;http://docs.python.org/reference/datamodel.html#object.__call__&quot;&gt;__call__&lt;/a&gt;을 통해 부를 수 있는)객체를 &lt;strong&gt;WSGI 어플리케이션&lt;/strong&gt;이라고 합니다.&lt;/p&gt;
+
+&lt;p&gt;정리하자면 스포카 서버는 &lt;a href=&quot;http://www.wsgi.org/en/latest/index.html&quot;&gt;WSGI&lt;/a&gt;에 맞게 작성된 프로그램을 &lt;a href=&quot;http://nginx.org&quot;&gt;nginx&lt;/a&gt;와 &lt;a href=&quot;http://projects.unbit.it/uwsgi&quot;&gt;uwsgi&lt;/a&gt;를 통해 운용하여 요청을 처리하는 웹 어플리케이션이라고 할 수 있습니다.&lt;/p&gt;
+
+&lt;h1&gt;&lt;a href=&quot;http://redis.io/&quot;&gt;Redis&lt;/a&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://redis.io/&quot;&gt;Redis&lt;/a&gt;란 &lt;strong&gt;키-값(Key-Value) 저장 서버&lt;/strong&gt;로 확장이 용이하며 속도가 우수합니다. 스포카 서버에선 이를 &lt;strong&gt;내부적인 임시 데이터 관리&lt;/strong&gt;와 &lt;a href=&quot;http://celeryproject.org&quot;&gt;Celery&lt;/a&gt;의 &lt;strong&gt;작업(Task) 분배&lt;/strong&gt;에 사용하고 있습니다.&lt;/p&gt;
+
+&lt;h1&gt;&lt;a href=&quot;http://celeryproject.org&quot;&gt;Celery&lt;/a&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://celeryproject.org&quot;&gt;Celery&lt;/a&gt;는 &lt;a href=&quot;http://python.org/&quot;&gt;Python&lt;/a&gt;으로 작성된 &lt;strong&gt;비동기 작업 큐(Asynchronous task queue/job queue)&lt;/strong&gt;입니다. 앞서 소개한 &lt;strong&gt;작업(Task)&lt;/strong&gt;를 &lt;strong&gt;브로커(Broker, 스포카 서버는 &lt;a href=&quot;http://redis.io/&quot;&gt;Redis&lt;/a&gt;를 사용)&lt;/strong&gt;를 통해 전달하면 하나 이상의 &lt;strong&gt;워커(Worker)&lt;/strong&gt;가 이를 처리하는 구조입니다. 포인트 적립-공유에 따른 분배처리, 포스팅 기능, 페이스북/트위터 공유등의 비동기 처리가 필요한 작업을 &lt;a href=&quot;http://celeryproject.org&quot;&gt;Celery&lt;/a&gt;에 위임하여 처리하고 있습니다.&lt;/p&gt;
+
+&lt;h1&gt;&lt;a href=&quot;http://aws.amazon.com/rds/&quot;&gt;Amazon Relational Database Service&lt;/a&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;대부분의 웹 어플리케이션과 마찬가지로 스포카 서버는 영속적으로 저장되어야하는 정보(회원 목록, 구매 내역)들을 디스크 기반의 데이터베이스(Database)에 저장합니다. &lt;a href=&quot;http://aws.amazon.com/rds/&quot;&gt;Amazon Relational Database Service(Amazon RDS)&lt;/a&gt;는 &lt;a href=&quot;http://aws.amazon.com/ec2/&quot;&gt;Amazon EC2&lt;/a&gt;를 기반으로 그러한 데이터베이스를 간편하게 관리(모니터링, 백업, 접근제어)할 수 있게 도와주는 웹서비스입니다. &lt;a href=&quot;http://www.oracle.com/kr/products/database/index.html&quot;&gt;Oracle&lt;/a&gt;과 &lt;a href=&quot;http://www.mysql.com/&quot;&gt;MySQL&lt;/a&gt;을 지원하는데 스포카 서버는 그 중 &lt;a href=&quot;http://www.mysql.com/&quot;&gt;MySQL&lt;/a&gt;을 사용하고 있습니다.&lt;/p&gt;
+
+&lt;h1&gt;&lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;Amazon Simple Storage Service&lt;/a&gt;&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://aws.amazon.com/s3/&quot;&gt;Amazon Simple Storage Service(Amazon S3)&lt;/a&gt;는 &lt;a href=&quot;http://aws.amazon.com/rds/&quot;&gt;Amazon RDS&lt;/a&gt;와 마찬가지로 &lt;a href=&quot;http://aws.amazon.com/ec2/&quot;&gt;Amazon EC2&lt;/a&gt;를 기반으로 한 데이터 저장 관리 서비스입니다. 스포카 서버에 업로드 되는 사진이나 문서등의 파일들을 통합하여 관리하여 서버의 인스턴스를 늘려 확장하는 경우에도 문제없이 대처할 수 있도록 하는 것이 주 목적입니다.&lt;/p&gt;
+</content>
+      </entry>
+      
+  
+      
+      <entry>
+        <id>http://spoqa.github.com/2011/12/17/about-spoqa-blog-creation</id>
+        <link type="text/html" rel="alternate" href="http://spoqa.github.com/2011/12/17/about-spoqa-blog-creation.html"/>
+        <title>Spoqa 블로그 탄생 비화</title>
+        <updated>2011-12-17T00:00:00+09:00</updated>
+        <author>
+          <name>akaz</name>
+          <uri>http://spoqa.github.com/2011/12/17/about-spoqa-blog-creation.html</uri>
+        </author>
+        <content type="html">&lt;h2&gt;github pages and Jekyll&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;안녕하세요. 스포카에서 &lt;a href=&quot;http://market.android.com/details?id=com.spoqa&quot;&gt;안드로이드 플랫폼&lt;/a&gt; 개발을 담당하고 있는 akaz입니다. 이번에 스포카 블로그를 오픈하게 되면서 제가 블로그에 관한 기술들을 알아보고 실제로 오픈하는 역할을 맡게 되었는데요, 그 과정들을 간단히 소개하고자 합니다.&lt;/p&gt;
+
+&lt;p&gt;스포카의 블로그를 운용하기 위해서 &lt;a href=&quot;https://github.com&quot;&gt;github&lt;/a&gt;의 &lt;a href=&quot;http://pages.github.com&quot;&gt;pages&lt;/a&gt;서비스를 이용합니다. 그리고 pages서비스에서는 기본적으로 &lt;a href=&quot;http://github.com/mojombo/Jekyll&quot;&gt;Jekyll&lt;/a&gt;이라는 블로그 자동 생성 프로그램을 제공해주고 있습니다. 글을 쓰고 게시 버튼을 눌러 포스팅하는 &lt;a href=&quot;http://tumblr.com&quot;&gt;텀블러&lt;/a&gt;나 &lt;a href=&quot;http://www.blogger.com&quot;&gt;블로그 스팟&lt;/a&gt;같은 일반적인 블로그 사이트와는 다르게 pages에서는 github 저장소에 변경되거나 새로 첨가된 파일을 push함으로써 정적으로 블로그를 생성하고 글을 포스팅 합니다.&lt;/p&gt;
+
+&lt;h2&gt;How to make blog inside github?&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;블로그를 생성하기에 앞서 먼저 github저장소를 만들어야 하는데요, github 가입 후 저장소 이름을 &amp;lt;자신의 user id&gt;.github.com으로 생성 후 이 곳에 index.html파일을 하나 푸시하면 10분 정도 뒤에 http://&amp;lt;자신의 user id&gt;.github.com 의 주소로 접속해서 생성된 사이트를 확인할 수 있습니다. 처음에 사이트를 생성하고 설정하느라 시간이 10분정도 소요되는데 그 이후에는 거의 바로 푸시 이후 변경사항을 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;h2&gt;How to use Jekyll?&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;앞서 한 방식대로 html파일을 매번 수정하여 저장소에 넣는 방식으로 블로그를 운영한다면 블로그 운영이 너무 피곤한 작업이 될 것입니다. Jekyll을 사용함으로서 이 과정을 더 편하게 진행할 수 있습니다. Jekyll을 사용하기에 앞서 먼저 &lt;a href=&quot;http://github.com/mojombo/Jekyll/wiki/install&quot;&gt;gem을 설치&lt;/a&gt;해야 합니다.&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;&lt;code&gt;$ gem install jekyll # 권한 문제가 있다면 sudo gem install jekyll &lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;앞서 소개한 링크에 설치 방법이 잘 나와있으므로 설치에 문제가 있다면 링크를 참고하여 설치하고 나면 이제 블로그를 만들기 위하여 로컬에 적당한 폴더하나를 생성하고 _config.yml파일을 생성하여 블로그 설정 사항을 세팅하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;_config.yml의 구조와 세팅값에 대한 설명이 이 &lt;a href=&quot;https://github.com/mojombo/Jekyll/wiki/configuration&quot;&gt;페이지&lt;/a&gt;에 자세히 나와있습니다. 특별한 상황이 아니면 페이지의 밑에 나와있는 default세팅 값만 적용하면 블로그 생성 시에 큰 문제가 없습니다.&lt;/p&gt;
+
+&lt;p&gt;세팅 값을 담은 yml파일을 생성하고 나면 이제 사이트 구조를 만들어야 할 차례입니다. Jekyll의 &lt;a href=&quot;https://github.com/mojombo/Jekyll/wiki/usage&quot;&gt;Usage&lt;/a&gt;페이지의 &lt;strong&gt;Deploy your site&lt;/strong&gt;섹션을 확인하면 Jekyll블로그를 생성하기 위한 사이트 구조를 확인해 볼 수 있습니다.&lt;/p&gt;
+
+&lt;pre&gt;
+.
+|-- _config.yml
+|-- _includes
+|-- _layouts
+|   |-- default.html
+|   \-- post.html
+|-- _posts
+|   |-- 2007-10-29-why-every-programmer-should-play-nethack.textile
+|   \-- 2009-04-26-barcamp-boston-4-roundup.textile
+|-- _site
+\-- index.html
+&lt;/pre&gt;
+
+
+&lt;p&gt;이 template폴더들중에 블로그에 &lt;strong&gt;가장 큰 역할을 하는 폴더&lt;/strong&gt;를 몇 개 살펴보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;_layout폴더&lt;/strong&gt;에는 말 그대로 &lt;strong&gt;레이아웃과 관련된 파일&lt;/strong&gt;이 올라가게 됩니다. 일반적으로 default.html파일 하나 post.html파일 하나를 두게 되는데요, 용도를 살펴보자면 default.html에는 모든 페이지에 &lt;strong&gt;공통적으로 적용될 레이아웃&lt;/strong&gt;(가령 header와 footer를 보여준다던지)을 설정하기 위해 사용되고 post.html의 경우 &lt;strong&gt;쓰여진 글들에 적용될 레이아웃&lt;/strong&gt;을 지정하기 위해 사용되게 됩니다. _layout폴더에 들어갈 html파일들안에 &lt;a href=&quot;https://github.com/Shopify/Liquid/wiki/Liquid-for-Designers&quot;&gt;Liquid&lt;/a&gt;문법을 적용할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;_posts폴더&lt;/strong&gt;에는 &lt;strong&gt;블로그에 포스트할 글들&lt;/strong&gt;이 올라가게 됩니다. 일반 html파일을 올려도 되고혹은 &lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;Markdown&lt;/a&gt;(확장자 .md)이나 &lt;a href=&quot;http://en.wikipedia.org/wiki/Textile_%28markup_language%29&quot;&gt;Textile&lt;/a&gt;(확장자 .textile) 문법으로 쓰여진 문서를 올려두면 Jekyll을 이용하여 서버를 시작할 때 자동으로 html파일로 변환되어 _site폴더에 저장되게 됩니다. 단, _posts폴더에 올라가는 파일을 올릴때에는 파일 이름에 &lt;strong&gt;약간의 형식&lt;/strong&gt;을 맞춰주어 올려야 합니다. 파일의 형식은 YEAR-MONTH-DAY-title.MARKUP의 형태가 되어야 하는데, 예를 들면 2011-12-17-this-posting-title.md같이 파일 이름을 지을 수 있습니다. (이 경우는 마크다운 문법 파일이라서 확장자를 md로 하였고 파일의 확장자는 자신이 원하는 확장자(html, md, textile)로 하면 됩니다. 다만 확장자에 따르는 문법에 맞게 문서를 구성하셔야겠지요?)&lt;/p&gt;
+
+&lt;h2&gt;Jekyll과 Liquid문법을 이용하여 실제로 간단한 블로그 만들어보기&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이제 한 번 실제로 블로그를 만들어볼 차례입니다. 이 섹션에서는 아주 간단한 블로그 하나를 만들어가면서 Jekyll의 사용 방법과 &lt;a href=&quot;https://github.com/Shopify/Liquid/wiki/Liquid-for-Designers&quot;&gt;Liquid&lt;/a&gt;문법에 대하여 설명합니다. Jekyll 설치 후 블로그로 쓸 폴더를 하나 만든 후 그 안에 _config.yml파일과 index.html파일 그리고 _layouts, _posts폴더를 생성합니다. (_config.yml파일은 앞서 링크에서 제공된 기본 _config.yml을 사용합니다.)&lt;/p&gt;
+
+&lt;p&gt;여기에 사용된 모든 소스들이 이 &lt;a href=&quot;https://github.com/akaz00/akaz00.github.com&quot;&gt;저장소&lt;/a&gt;에 저장되어 있습니다. 이 파일들을 받고 바로 Jekyll 서버를 실행시키면 &lt;a href=&quot;http://akaz00.github.com/&quot;&gt;블로그&lt;/a&gt;를 확인해 볼 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이제 실제 소스 코드를 보면서 설명하겠습니다.&lt;/p&gt;
+
+&lt;h3&gt;template 파일 작성&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;먼저 view를 담당할 template html파일을 작성해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;_layouts/default.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1484815.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;가장 먼저 보게 될 파일은 default.html파일입니다. 이 파일에서 일반적으로 쓰일 html파일의 구조와 레이아웃을 지정해놓고, content class의 division에 {{ content }}를 &lt;a href=&quot;https://github.com/Shopify/Liquid/wiki/Liquid-for-Designers&quot;&gt;Liquid&lt;/a&gt;마크업을 삽입하여 그 division안으로 앞으로 만들어갈 파일 안의 본문 내용이 삽입되도록 설정하였습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;index.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1484813.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;그 다음으로 보실 파일은 index.html파일인데요, 맨 위에 대쉬(-) 새개로 덮혀있는 부분을 보실 수 있습니다. 이것은 &lt;a href=&quot;https://github.com/mojombo/Jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front matter&lt;/a&gt;형식으로 작성된 선언부입니다. layout이라고 적혀있고 default로 되어있는데, 그 말은 _layouts폴더의 default.html에 content를 집어넣겠다는 선언입니다. 즉, 현재 index.html에 들어가 있는 html문서 내용이 default.html안에 &lt;a href=&quot;https://github.com/Shopify/Liquid/wiki/Liquid-for-Designers&quot;&gt;Liquid&lt;/a&gt; 마크업으로 {{ content }}라고 쓰여진 부분에 삽입되게 되는것이지요.&lt;/p&gt;
+
+&lt;p&gt;코드 중간을 보시면 포스팅된 글의 목록을 가져오기 위해 중간에 반복문으로 li태그 안에 문서에 접근할 수 있는 링크를 만들어주는 것을 확인할 수 있습니다. post들을 하나 하나 가져오면서 post.date(포스팅 날짜), post.url(실제 문서로 접근할 url) 그리고 post.title(포스팅의 제목)에 접근하여 관련 내용을 list로 만들어주고 있습니다. date, url, title앞에 붙은 post의 정체는 무엇일까요? 그것들은 &lt;strong&gt;Jekyll에서 기본적으로 제공하는 전역 변수들&lt;/strong&gt;입니다. Jekyll에서는 이러한 미리 제공되는 &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Template-Data&quot;&gt;template global data&lt;/a&gt;들을 특정한 변수 이름으로 불러올 수 있도록 하고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;_layouts/post.html&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1484817.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;포스팅 내용이 표시될 template html파일입니다. 간단히 h1태그 안에 제목을 넣어주었고 역시 {{ content }}를 삽입하여 그 안에 내용이 삽입되도록 하였습니다. (post 파일의 &lt;a href=&quot;https://github.com/mojombo/Jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front matter&lt;/a&gt;에 들어간 모든 항목에 접근하기 위해 앞에 page.가 붙습니다, 이 경우 page.title로 접근하여 제목을 얻어왔습니다.) page역시 미리 제공되는 &lt;a href=&quot;https://github.com/mojombo/jekyll/wiki/Template-Data&quot;&gt;template global data&lt;/a&gt;의 한 변수입니다.&lt;/p&gt;
+
+&lt;h3&gt;_post안의 포스팅 파일 살펴보기&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;_posts/2011-12-17-first-post.md&lt;/strong&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1484827.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;이제 포스팅을 하려하는 내용을 담을 md파일을 살펴보겠습니다. layout에는 post.html을 적용할 것이므로 post라 적고 title에는 포스팅의 제목을 적어줍니다. 그리고 마지막으로 &lt;a href=&quot;https://github.com/mojombo/Jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front matter&lt;/a&gt;아래에 본문 내용을 적어줍니다. 파일 이름은 연도-월-일-제목.확장자의 형식을 지켜주어야 하므로 2011-12-17-first-post.md라 지었습니다.&lt;/p&gt;
+
+&lt;p&gt;이상으로 매우 간단한 블로그가 완성되었습니다. 실제 적용되는 모습을 보려면 Jekyll서버를 가동하면됩니다.&lt;/p&gt;
+
+&lt;pre class=&quot;terminal&quot;&gt;&lt;code&gt;$ jekyll --server&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;명령어를 통해 Jekyll서버를 가동시킵니다. 가동시키면 이제 &lt;strong&gt;_site폴더가 생성&lt;/strong&gt;되고 그 안에 &lt;strong&gt;변환되어진 html파일들이 저장&lt;/strong&gt;되는 것을 볼 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;_config.yml파일에 설정된 디폴트 포트가 &lt;strong&gt;4000&lt;/strong&gt;이므로 브라우져를 킨 후 &lt;strong&gt;localhost:4000&lt;/strong&gt;주소로 접근하여 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/screenshot1.png&quot; alt=&quot;blog screenshot 1&quot; /&gt;
+&lt;strong&gt;index화면의 모습 (index.html)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/screenshot2.png&quot; alt=&quot;blog screenshot 2&quot; /&gt;
+&lt;strong&gt;실제 포스팅으로 들어온 화면의 모습 (post.html)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;완성된 블로그의 모습입니다, 현재는 아무것도 꾸며진게 없고 포스팅도 없어 매우 썰렁하지만 CSS를 이용하여 블로그를 좀 더 예쁘게 만들어  갈 수 있을것입니다!&lt;/p&gt;
+
+&lt;p&gt;_posts안에 있는 post파일들에 들어갈 &lt;a href=&quot;https://github.com/mojombo/Jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front matter&lt;/a&gt;에 관한 정보는 &lt;a href=&quot;https://github.com/mojombo/Jekyll/wiki/template-data&quot;&gt;이곳&lt;/a&gt;의 &lt;strong&gt;Post&lt;/strong&gt;섹션에서 확인가능합니다.&lt;/p&gt;
+
+&lt;h2&gt;Example sites&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;지금까지 개략적으로 github pages와 Jekyll의 사용법을 알아보았습니다.&lt;/p&gt;
+
+&lt;p&gt;Jekyll을 이용하여 만들어진 여러 사이트들을 모아놓은 &lt;a href=&quot;https://github.com/mojombo/Jekyll/wiki/sites&quot;&gt;리스팅 페이지&lt;/a&gt;의 저장소를 확인하면 더 많은 활용예를 볼 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;또한 이 &lt;a href=&quot;http://net.tutsplus.com/tutorials/other/building-static-sites-with-Jekyll/&quot;&gt;사이트&lt;/a&gt;에서도 유용한 정보를 확인할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Link sites&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com&quot;&gt;github&lt;/a&gt; - github 공식 사이트  &lt;br/&gt;
+&lt;a href=&quot;http://pages.github.com&quot;&gt;github pages&lt;/a&gt; - github pages 소개 페이지  &lt;br/&gt;
+&lt;a href=&quot;http://github.com/mojombo/Jekyll&quot;&gt;Jekyll&lt;/a&gt; - Jekyll 저장소  &lt;br/&gt;
+&lt;a href=&quot;https://github.com/mojombo/Jekyll/wiki/sites&quot;&gt;Jekyll을 이용하여 생성된 블로그 리스트&lt;/a&gt;     &lt;br/&gt;
+&lt;a href=&quot;https://github.com/mojombo/Jekyll/wiki/YAML-Front-Matter&quot;&gt;YAML Front matter&lt;/a&gt; - YAML Front matter 소개 페이지  &lt;br/&gt;
+&lt;a href=&quot;https://github.com/Shopify/Liquid/wiki/Liquid-for-Designers&quot;&gt;Liquid for Designers&lt;/a&gt; - Liquid 문법 소개 페이지&lt;/p&gt;
+</content>
+      </entry>
+      
+  
+      
+      <entry>
+        <id>http://spoqa.github.com/2011/12/10/sqlalchemy-hybrid-attributes</id>
+        <link type="text/html" rel="alternate" href="http://spoqa.github.com/2011/12/10/sqlalchemy-hybrid-attributes.html"/>
+        <title>SQLAlchemy의 Hybrid Attributes를 이용해서 MySQL에서의 위치정보를 깔끔하게 암호화하기</title>
+        <updated>2011-12-10T00:00:00+09:00</updated>
+        <author>
+          <name>shinvee</name>
+          <uri>http://spoqa.github.com/2011/12/10/sqlalchemy-hybrid-attributes.html</uri>
+        </author>
+        <content type="html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://ko.wikipedia.org/wiki/%EC%9C%84%EC%B9%98_%EA%B8%B0%EB%B0%98_%EC%84%9C%EB%B9%84%EC%8A%A4&quot;&gt;위치 기반 서비스&lt;/a&gt;(Location-based Service)&lt;/strong&gt;를 국내에서 합법적으로 운영하기 위해선 위치기반 사업자 등록이 필요하다. 이 과정은 여러가지 보안사항에 대한 적용을 강제하고 있는데, 이 중 위치정보의 저장을 전부 암호화해야 한다는 조항이 있다.&lt;/p&gt;
+
+&lt;p&gt;이미 서비스를 어느정도 구현하여 운영중이라면 특히 이 조항이 매우 귀찮거나 부담되는 일일 수가 있다. 모든 위치정보 기록시점에서 암호화가 되어 저장되어야하고, 위치정보를 참조하거나 계산하는 시점에서 바로 복호화가 되어야 하기 때문이다.&lt;/p&gt;
+
+&lt;p&gt;스포카 개발팀은 이미 여러 곳에서 위치 정보를 암호화하지 않은 형태로 저장하고 불러오고 있었기 때문에, 기존 코드를 거의 유지하면서 위치정보 암호화를 투명하게 구현하기 위해 &lt;a href=&quot;http://www.sqlalchemy.org/&quot;&gt;SQLAlchemy&lt;/a&gt;의 &lt;a href=&quot;http://www.sqlalchemy.org/docs/orm/extensions/hybrid.html&quot;&gt;Hybrid Attributes&lt;/a&gt;를 사용하였다.&lt;/p&gt;
+
+&lt;h2&gt;SQLAlchemy?&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.sqlalchemy.org/&quot;&gt;SQLAlchemy&lt;/a&gt;는 파이썬에서 이용할 수 있는 &lt;a href=&quot;http://en.wikipedia.org/wiki/Object-relational_mapping&quot;&gt;ORM&lt;/a&gt;으로, 상당히 고 수준의 인터페이스를 제공하여 완벽에 가까운 수준의 Object-Relation Mapping을 구현할 수 있게 도와준다.&lt;/p&gt;
+
+&lt;h2&gt;Hybrid Attributes?&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;최근 0.7에선 &lt;a href=&quot;http://www.sqlalchemy.org/docs/orm/extensions/hybrid.html&quot;&gt;Hybrid Attributes&lt;/a&gt;라는 것이 추가되었는데, 이 기능은 클래스가 정의한 속성이 사용 시점에 따라 파이썬 네이티브로, 혹은 같은 표현식의 SQL Query로도 이용할 수 있게 도와준다.&lt;/p&gt;
+
+&lt;p&gt;일반적인 클래스의 속성형이라면 이미 파이썬으로 가져온 엔티티에 한해서 이용할 수밖에 없으나, &lt;a href=&quot;http://www.sqlalchemy.org/docs/orm/extensions/hybrid.html&quot;&gt;Hybrid Attributes&lt;/a&gt;를 이용하면 select query의 조건절같이 SQL 문법으로 변환되어야 하는 시점에서도 해당 속성 요소를 활용할 수 있다.&lt;/p&gt;
+
+&lt;h2&gt;방법&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;먼저 기존의 서비스는 엔티티에 위치 값을 저장시키기 위해 &lt;strong&gt;LocationMixIn&lt;/strong&gt;이라는 클래스를 정의해놓고 필요한 엔티티 클래스가 이를 상속받게 하였다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1452137.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;우리는 이를 실제로는 암호화해서 저장한 후, 참조하는 모든 환경에서 다시 원래 값으로 복호화하는 hybrid property를 구현하고 이로  구성된 새로운 클래스로 기존 LocationMixIn을 교체할 것이다.&lt;/p&gt;
+
+&lt;h3&gt;1. MySQL의 AES 암호화 알고리즘과 호환되는 암호화 알고리즘 구현&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;MySQL에선 AES 압축 알고리즘이 기본으로 제공되며 이는 각각 AES_ENCRYPT, AES_DECRYPT이다. 해당 함수들이 알고리즘을 설명한 &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.5/en/encryption-functions.html#function_aes-encrypt&quot;&gt;스펙문서&lt;/a&gt;에 따라 python에서 구현해주면 된다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1452269.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;h3&gt;2. 기존 LocationMixIn을 대체할 새로운 클래스 정의&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;준비가 되었다면 이제 새로운 &lt;strong&gt;EncryptedLocationMixIn&lt;/strong&gt;을 만들어보자. 아래와 같이 암호화된 값을 받을 공간을 할당받게 먼저 구성한다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1452328.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;하나의 위치 정보 속성에 대한 hybrid property를 구현하기 위해 세가지 함수를 정의한다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1452349.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;lat 이라는 함수가 암호화된 lat을 복호화해서 반환하게 구현한 후 이를 &lt;strong&gt;@hybrid_property&lt;/strong&gt;로 만든다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1452370.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;기본 수식 정도는 hybrid_property 선언만으로 자연스럽게 SQL 표현식으로 변환이 되지만, 우리는 지원하지 않는 MySQL built-in function을 이용하고 있기 때문에 위와 같이 복호화에 대한 SQL expression을 새로 구현해준다. &lt;a href=&quot;http://www.sqlalchemy.org/docs/core/expression_api.html#sqlalchemy.sql.expression.func&quot;&gt;&lt;strong&gt;sqlalchemy.sql.expression.func&lt;/strong&gt;&lt;/a&gt;는 SQL function을 표현할 수 있게 해주는 객체 인스턴스이다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1452406.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;마지막으로 값이 저장될 때 암호화되어 저장될 수 있도록 한다. 16자로 자르는 이유는 위치 값이 그보다 길어질 때 암호화된 값이 잘려서 들어갈 위험을 방지하기 위해서이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;lng&lt;/strong&gt;도 마찬가지로 구현해주면 된다.&lt;/p&gt;
+
+&lt;h3&gt;3. 기존의 LocationMixIn을 교체&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;현재 만든 &lt;strong&gt;EncryptedLocationMixIn&lt;/strong&gt;은 MySQL의 built-in function을 이용하기 때문에 다른 DB에서는 작동하지 않을 것이다. 우리는 프로덕션 서비스에서만 암호화되어 작동되면 되므로 EncryptedLocationMixIn을 mysql 연결시에만 교체하도록 하였다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1452426.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;이와 같이 하면 SQLite와 같은 DB에선 평범하게 값이 저장이 되고, MySQL에서만 암호화되어 저장되게 된다.&lt;/p&gt;
+
+&lt;h2&gt;장점&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;hybrid property를 이용해서 위치정보를 암호화하면, 암호화된 위치정보를 어떤 상황에서든 암호화되지 않은 위치정보를 다루듯이 이용할 수 있다는 것이 장점이다.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1452468.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;이와 같이 가져온 객체의 위치값을 바로 복호화해서 받아내며,&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/1452483.js?file=gistfile1.py&quot;&gt;  &lt;/script&gt;
+
+
+&lt;p&gt;이와 같이 숫자 계산과 비교를 하는 조건절에도 대응을 할 수 있다. 첫째 줄과 컴파일된 WHERE절을 비교해보자.&lt;/p&gt;
+
+&lt;p&gt;이러한 방식을 통해 &lt;a href=&quot;http://www.spoqa.com/&quot;&gt;스포카&lt;/a&gt;는 기존의 핸들러/모델 메서드들이 위치값에 접근하기 위해 구현된 코드를 건드리지 않으면서, 저장되는 위치정보를 성공적으로 암호화할 수 있었다.&lt;/p&gt;
+</content>
+      </entry>
+      
+  
+      
+      <entry>
+        <id>http://spoqa.github.com/2011/12/10/open</id>
+        <link type="text/html" rel="alternate" href="http://spoqa.github.com/2011/12/10/open.html"/>
+        <title>Spoqa 기술 블로그를 오픈합니다.</title>
+        <updated>2011-12-10T00:00:00+09:00</updated>
+        <author>
+          <name>shinvee</name>
+          <uri>http://spoqa.github.com/2011/12/10/open.html</uri>
+        </author>
+        <content type="html">&lt;p&gt;안녕하세요. 이 블로그는 친구와 함께 적립하는 소셜 포인트 카드, &lt;a href=&quot;http://www.spoqa.com/&quot;&gt;Spoqa&lt;/a&gt;의 개발팀이 운영하는 기술블로그입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.spoqa.com/&quot;&gt;Spoqa&lt;/a&gt;를 구성하는 기술 중 많은 부분이 &lt;a href=&quot;http://ko.wikipedia.org/wiki/%EC%98%A4%ED%94%88_%EC%86%8C%EC%8A%A4&quot;&gt;오픈소스&lt;/a&gt;에 기반한 기술들로 구성되어있으며, 오픈소스 기술들을 이용하는 주체라면 그만큼 직접 기여하는 면이 있어야 한다고 믿습니다. 그러한 기여가 모일 수록 오픈소스 커뮤니티가 건강해지며, 이를 이용하는 당사자들이 함께 성장할 수 있을 것입니다.&lt;/p&gt;
+
+&lt;p&gt;저희가 배운 것들, 저희가 개선한 것들 또한 오픈소스로 공개하고 기여하려고 합니다. 앞으로 두가지 장소에서 저희 활동을 보실 수 있습니다.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;기술 블로그(&lt;a href=&quot;http://spoqa.github.com/&quot;&gt;http://spoqa.github.com/&lt;/a&gt;):&lt;/strong&gt; 몇가지 Code snippet과 설명등을 포함하여 매주 1회씩 저희가 배운 여러가지 기술들에 대해 소개하는 곳입니다. 바로 이 곳이지요.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Github(&lt;a href=&quot;https://github.com/spoqa&quot;&gt;https://github.com/spoqa&lt;/a&gt;):&lt;/strong&gt; 스포카에서 자체적으로 개발해서 운영하는 오픈소스 프로젝트나, 저희에 맞게 개선하기 위해 fork한 프로젝트들을 보실 수 있습니다.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;기술 블로그 또한 Github에 오픈소스로 공개되어있습니다. 그렇기 때문에 블로그 내용을 포함한 저희의 모든 활동에 대해 다양한 피드백과 &lt;a href=&quot;http://help.github.com/send-pull-requests/&quot;&gt;Pull request&lt;/a&gt;를 기대합니다.&lt;/p&gt;
+</content>
+      </entry>
+      
+  
+ 
+</feed>

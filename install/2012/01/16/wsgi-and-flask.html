@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=device-width; initial-scale=2.0; maximum-scale=1.0; user-scalable=0;" />
+
+<title>Spoqa Tech Blog</title>
+<link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+<script src="http://www.google.com/jsapi"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+ google.load( "webfont", "1" );
+ google.setOnLoadCallback(function() {
+  WebFont.load({ custom: {
+   families: [ "NanumGothic" ],
+   urls: [ "http://fontface.kr/NanumGothic/css" ]
+  }});
+ });
+
+/*
+$('a').hover(
+  function(obj) {
+    alert('in');
+  },
+  function(obj) {
+    alert('out');
+  }
+);
+*/
+
+</script>
+
+
+<meta property="og:title" content="Flask로 만들어 보는 WSGI 어플리케이션"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="http://spoqa.github.com/2012/01/16/wsgi-and-flask.html"/>
+<meta property="og:site_name" content="Spoqa Tech Blog"/>
+<meta property="og:description"
+      content="WSGI 어플리케이션의 작성법과 이러한 일을 쉽게 도와주는 Flask를 소개합니다."/>
+
+<meta property="og:image" content="http://www.gravatar.com/avatar/52813188698089bda7e20154c114d17e.png"/>
+</head>
+<body>
+<div class="content-body">
+  <div class="wrapper">
+    <div class="header">
+      <a href="http://spo.qa/get"><img src="/images/logo.png" style="margin-top: 10px; padding-right: 15px; vertical-align: middle;" /></a><a href="/" style="
+      font-family: arial;
+      font-weight: bold;
+      font-size: 40px;
+      color: white;
+      text-shadow: 0px 1px 1px #333;
+      display: inline-block;
+      ">Tech Blog</a>
+      <ol id="menu-list">
+          
+            <li><a href="/about.html">About</a></li><span class="seperator">&nbsp;/</span>
+          
+          
+            <li><a class="selected" href="/index.html">Blog</a></li><span class="seperator">&nbsp;/</span>
+          
+
+          
+            <li><a href="/job.html">We're hiring!</a></li><span class="seperator">&nbsp;/</span>
+          
+          <li><a href="https://github.com/spoqa">github</a></li>
+          <li><a href="/atom.xml"><img class="atom-img" src="/images/atom.png" /></a></li>
+        </ol>
+    </div>
+  
+    <hr style="margin-top: 20px; margin-bottom: 20px;" />
+
+    <div class="content">
+      <h1 class="post-title">Flask로 만들어 보는 WSGI 어플리케이션</h1>
+
+
+<div class="post-author-info">
+    <img class="portrait" src="/images/profile/longfin@spoqa.com.png" />
+  
+    <span class="author-name"><a href="mailto:longfin@spoqa.com">문성원</a></span>  
+  
+</div>
+
+
+
+  <div class="post"><p>안녕하세요. <a href="http://spoqa.com">스포카</a> 크리에이터팀 문성원입니다. 오늘은 <a href="http://www.wsgi.org/en/latest/index.html">WSGI(Web Server Gateway Interface)</a> 어플리케이션을 직접 작성해보고, 또 이런 작성을 보다 쉽게 도와주는 프레임워크 중 하나인 <a href="http://flask.pocoo.org">Flask</a>에 대해서 알아보겠습니다.</p>
+
+<h1>WSGI</h1>
+
+<hr />
+
+<p><a href="http://www.wsgi.org/en/latest/index.html">WSGI</a>에 대해 기억이 가물하신 분들을 위해 <a href="http://spoqa.github.com/2011/12/24/about-spoqa-server-stack.html">지난 글</a>의 일부를 잠깐 다시 살펴보죠.</p>
+
+<blockquote><p>이 경우 <a href="http://projects.unbit.it/uwsgi">uwsgi</a>는 일종의 <strong>어플리케이션 컨테이너(Application Container)</strong>로 동작하게 됩니다. 적재한 어플리케이션을 실행만 시켜주는 역할이죠. 이러한 <a href="http://projects.unbit.it/uwsgi">uwsgi</a>에 적재할 어플리케이션(스포카 서버)에는 일종의 규격이 존재하는데, 이걸 <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a>라고 합니다.(정확히는 <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a>에 의해 정의된 어플리케이션을 돌릴 수 있게 설계된 컨테이너가 <a href="http://projects.unbit.it/uwsgi">uwsgi</a>라고 봐야겠지만요.) <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a>는 <a href="http://python.org/">Python</a> 표준(<a href="http://www.python.org/dev/peps/pep-0333/">PEP-033</a>)으로 [HTTP]를 통해 요청을 받아 응답하는 어플리케이션에 대한 명세로 이러한 명세를 만족시키는 클래스나 함수, (<a href="http://docs.python.org/reference/datamodel.html#object.__call__">__call__</a>을 통해 부를 수 있는)객체를 <strong>WSGI 어플리케이션</strong>이라고 합니다.</p></blockquote>
+
+<p>글로는 감이 잘 안오신다구요? 그럼 코드를 보면서 같이 살펴봅시다. (모든 코드는 <a href="http://python.org/">Python</a> 2.7에서 테스트 되었습니다.)</p>
+
+<h2>Hello World!</h2>
+
+<script src="https://gist.github.com/1606034.js"> </script>
+
+
+<p><code>app</code>은 일반적인 <a href="http://python.org/">Python</a> 함수지만, 동시에 WSGI 어플리케이션이기도 합니다. <code>environ</code>과 <code>start_response</code>를 받는 함수기 때문이죠.(<a href="http://www.python.org/dev/peps/pep-0333/#the-application-framework-side">참고</a>) 꼭 함수일 필요도 없습니다. 다음은 위의 <code>app</code>과 동일한 동작을 하는 WSGI 어플리케이션입니다.</p>
+
+<script src="https://gist.github.com/1606137.js"> </script>
+
+
+<p><code>App</code>는 <a href="http://python.org/">Python</a> 클래스로 <code>environ</code>과 <code>start_response</code>를 멤버 변수로 가지는데, 이는 생성자(Constructor)인 <code>App</code>를 함수처럼 사용하게 하여 <code>__iter__</code>를 구현한 <a href="http://docs.python.org/glossary.html#term-iterable">순회 가능한(Iterable)</a> 객체를 결과 값으로 사용하게 됩니다. (덤으로 이 객체는 <a href="http://docs.python.org/glossary.html#term-generator">발생자(Generator)</a>를 돌려주게 됩니다.)</p>
+
+<p>그런데 이 코드들을 실행하려면 어떻게 해야할까요? 그러려면 먼저 <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a> 규격에 맞게 어플리케이션을 실행시켜 줄 서버를 작성해야합니다. 하지만 다행히도 <a href="http://python.org/">Python</a> 2.5부터 제공되는 <a href="http://docs.python.org/library/wsgiref.html#module-wsgiref.simple_server"><code>wsgiref.simple_server</code></a>를 이용하면 간단히 테스트 해 볼 수 있습니다.(서버를 직접 작성하는 부분에 대해선 나중에 다루도록 하겠습니다.)</p>
+
+<script src="https://gist.github.com/1606870.js"> </script>
+
+
+<p>위 코드를 실행시킨 후에(당연히 <code>app</code>도 만들어져 있어야겠죠?) 웹 브라우져를 통해 <code>localhost:8000</code>으로 접속하면 작성한 어플리케이션의 동작을 확인할 수 있습니다.</p>
+
+<h2>environ과 start_response</h2>
+
+<p>테스트도 해봤으니 코드를 조금만 더 자세히 살펴보도록 하죠. 함수 버젼의 <code>app</code>이나 클래스 버젼의 <code>App</code> 모두 공통적으로 <code>environ</code>과 <code>start_response</code>를 인자로 받아 요청을 처리하는 것을 확인할 수 있습니다. (당연한 이야기겠지만, 반드시 이름이 <code>environ</code>이나 <code>start_response</code>일 필요는 없습니다만 편의상 이후 계속 <code>environ</code>과 <code>start_response</code>로 표기하겠습니다.)</p>
+
+<p> 하나씩 살펴보자면, <code>environ</code>은 Python <a href="http://docs.python.org/library/stdtypes.html#typesmapping">딕셔너리(dictionary)</a>로 HTTP 요청을 처리하는데 필요한 정보가 저장되어있습니다. HTTP 요청에 대한 정보는 물론, O/S나 <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a> 서버의 설정 등도 <a href="http://www.python.org/dev/peps/pep-0333/#environ-variables">정의</a>되어있지요. 다음 코드는 이러한 <code>environ</code>의 내용을 응답으로 주게끔 수정한 <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a> 어플리케이션입니다.</p>
+
+<script src="https://gist.github.com/1615142.js"> </script>
+
+
+<p><code>localhost:8000</code>에 각종 쿼리 스트링(Query String)을 붙이거나, 브라우져를 바꿔가면서 확인해보면 출력되는 값이 바뀌는 것을 확인하실 수 있습니다.</p>
+
+<p>그럼 이제 <code>start_response</code>를 한번 볼까요. <code>start_response</code>는 일종의 콜백(Callback)으로 인터페이스는 다음과 같습니다.</p>
+
+<pre><code>    start_response(status, response_headers, exc_info=None) 
+</code></pre>
+
+<p>실제 서버에서 어플리케이션으로부터 응답(Response)의 상태(Status)와 헤더(Header), 그리고 예외(Exception)의 유무를 확인받아 실행하는 역할을 합니다. <code>status</code>와 <code>response_headers</code>는 <a href="http://tools.ietf.org/html/rfc2616">HTTP 응답 명세</a>에 근거하여 작성하게 됩니다.</p>
+
+<h2>Middleware</h2>
+
+<p>지금까지 우리는 어떻게 <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a> 어플리케이션을 작성하는지에 대해 살펴봤습니다. 요청을 받아 처리하는 HTTP의 기본 기능에 충실한 어플리케이션이었죠. 그런데 일반적으로 우리가 작성하는 웹 어플리케이션에서 주로 다루게 되는 쿠키(Cookie), 세션(Session)에 대해서는 어떻게 처리해야 좋을까요? <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a> 명세에는 이러한 내용을 직접적으로 다루고 있지 않습니다. <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a> 자체는 서버나 프레임워크 자체가 아니라 서버가 어플리케이션과 통신하는 명세를 다루고 있기 때문이죠. 따라서 이러한 기능은 작성자가 직접 이를 구현해야 합니다. 그런데 이런 구현을 어플리케이션을 작성할때마다 하는건 너무 번거로운 일입니다. 그것보다는 이미 작성한 어플리케이션을 확장하는 것이 간단하겠지요. 이러한 확장을 위해 필요한 것이 WSGI 미들웨어(Middleware)입니다.</p>
+
+<p><img src="/images/middleware.jpg" width="400" alt="list" /></p>
+
+<p>미들웨어는 어플리케이션을 처리하기 전후의 처리나 <code>environ</code>의 추가등을 통해 작성된 어플리케이션을 확장할 수 있습니다. 다음은 쿼리 스트링의 <code>__method__</code>에 따라 HTTP 메소드(Method)를 임의로 변경하는 처리를 도와주는 간단한 미들웨어입니다.</p>
+
+<script src="https://gist.github.com/1616103.js"> </script>
+
+
+<p><code>MethodRewriteMiddleware</code>는 <code>__call__</code>를 통해 <code>app</code>을 대체하게 됩니다. (<a href="http://www.python.org/dev/peps/pep-0318/">데코레이터(Decorator)</a>가 생각나셨다면 정확한 이해십니다.)</p>
+
+<h1>Flask</h1>
+
+<hr />
+
+<p>미들웨어를 통해 어플리케이션을 확장하는 방법까지 알아봤습니다. 그러나 이것만 가지고 웹 어플리케이션을 만들기에는 아직 귀찮은 부분이 많이 남아있습니다. 각종 파라미터를 처리하기 위해서는 <code>environ</code>를 일일히 뒤져야하며, 요청에 대한 응답으로 전달할 HTML도 일일히 문자열로 적어야하죠. 이런 여러가지 불편함을 해결하기 위해 알아볼 것이 <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a> 마이크로프레임워크를 자처하는 <a href="http://flask.pocoo.org">Flask</a>입니다. <a href="http://flask.pocoo.org">Flask</a>는 <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a> 라이브러리인 <a href="http://werkzeug.pocoo.org/">Werkzeug</a>를 만들기도 한 <a href="http://lucumr.pocoo.org/about/">Armin Ronacher</a>가 만든 프레임워크로 "마이크로"라는 수식어에 어울리게 아주 핵심적인 부분만을 구현하고 있지만, 유연하게 확장이 가능하게 설계된 것이 특징입니다.</p>
+
+<h2>다시 한번 Hello World!</h2>
+
+<p>우선 <a href="http://flask.pocoo.org">Flask</a>를 시스템에 설치해야하는데, <a href="http://pypi.python.org/pypi/pip">pip</a>가 설치되어있다면 <code>pip install flask</code>로 설치 가능합니다.(환경에 따라 루트(root)권한이 필요할 수도 있습니다.) [easy_install]의 경우도 마찬가지로 <code>easy_install flask</code>로 설치 가능합니다.</p>
+
+<p>설치가 완료되었으면 다음과 같이 아주 간단한 어플리케이션을 작성해봅시다.</p>
+
+<script src="https://gist.github.com/1616212.js"> </script>
+
+
+<p><a href="http://flask.pocoo.org">Flask</a>(정확히는 <a href="http://werkzeug.pocoo.org/">Werkzeug</a>)는 테스트를 위해 간단한 <a href="http://www.wsgi.org/en/latest/index.html">WSGI</a> 서버를 자체 내장하고 있기 때문에 <a href="http://flask.pocoo.org/docs/api/#flask.Flask.run"><code>app.run</code></a>을 통해 어플리케이션을 직접 내장 서버에서 실행할 수 있습니다.</p>
+
+<h2>Route</h2>
+
+<p>이번에 작성한 Flask 어플리케이션에는 이전까지 보지 못하던 개념이 들어가있습니다. <a href="http://flask.pocoo.org/docs/api/#flask.Flask.route"><code>app.route</code></a>가 바로 그것인데요. 이 메서드는 <a href="http://ko.wikipedia.org/wiki/URL">URL</a> 규칙을 받아 해당하는 규칙의 URL로 요청이 들어온 경우 등록한 함수를 실행하게끔 설정합니다. 위의 Hello World! 예제 같은 경우엔 "/"가 해당되겠지요. 또한 이런 규칙에는 변수도 설정할 수 있습니다.</p>
+
+<script src="https://gist.github.com/1616249.js"> </script>
+
+
+<p>이렇게 URL과 처리할 핸들러를 매치하는 것을 일반적으로 URL 라우팅(Routing)이라고 합니다. 이런 URL 라우팅에서 중요한 기능 중 하나가 핸들러에서 해당하는 URL을 생성하는 기능인데, <a href="http://flask.pocoo.org">Flask</a>는 이를 <a href="http://flask.pocoo.org/docs/api/#flask.url_for"><code>url_for</code></a> 메서드를 통해 지원합니다.</p>
+
+<script src="https://gist.github.com/1616290.js"> </script>
+
+
+<p>보다 자세한 사항은 <a href="http://flask.pocoo.org/docs/api/#url-route-registrations">API 문서</a>를 참고하실 수 있습니다.</p>
+
+<h2>Template</h2>
+
+<p>여태까지 우리는 요청에 대한 응답으로 단순한 문자열을 사용했습니다. 하지만 일반적인 웹 어플리케이션의 응답은 대부분이 그것보다 훨씬 복잡하지요. 이를 보다 쉽게 작성할 수 있게끔 도와주는 것이 바로 <a href="http://flask.pocoo.org">Flask</a>의 <a href="http://flask.pocoo.org/docs/templating/">템플릿(Template)</a>입니다. <a href="http://flask.pocoo.org">Flask</a>는 기본 템플릿 엔진으로 (역시 <a href="http://lucumr.pocoo.org/about/">Armin Ronacher</a>가 작성한)[Jinja2]를 사용합니다.</p>
+
+<p>기본적으로 템플릿엔진은 별도의 규칙(여기서는 [Jinja2])에 맞게 작성된 템플릿 파일을 읽어 환경(Context)에 맞게 적용한 결과물을 돌려주는데 이 과정을 <a href="http://flask.pocoo.org">Flask</a>에서는 <a href=""><code>render_template</code></a>가 담당하고 있습니다. 다음 코드는 <code>hello.html</code>이라는 템플릿 파일을 읽어서 이름을 적용한 뒤에 돌려주는 코드입니다.</p>
+
+<script src="https://gist.github.com/1616379.js"> </script>
+
+
+<p>쉽게 작성할 수 있게 도와준다고해도, 템플릿 역시 나름의 학습을 필요로 합니다. 자세한 사항은 <a href="http://jinja.pocoo.org/docs/api/">Jinja2의 API 문서</a>를 참고하시기 바랍니다.</p>
+
+<h2>Request</h2>
+
+<p>HTTP 요청을 다루기 위해서 때로는 <code>environ</code>의 내용은 너무 원시적일때가 있습니다. HTML 폼(Form)으로부터 입력받는 값이 좋은 예인데요. <a href="http://flask.pocoo.org">Flask</a>에서는 <a href="http://flask.pocoo.org/docs/api/#flask.request"><code>request</code></a>라는 객체(역시 <a href="http://werkzeug.pocoo.org/">Werkzeug</a>에서 가져다가쓰는 거지만요)를 통해 이를 보다 다루기 쉽게 해줍니다. 다음은 HTML 폼으로부터 입력받은 <code>message</code>라는 값을 뒤집어서 출력하는 코드입니다.</p>
+
+<script src="https://gist.github.com/1616333.js"> </script>
+
+
+<h2>Session</h2>
+
+<p>로그인등으로 대표되는 요청간의 상태를 유지해야하는 처리에 흔히 세션(Session)을 사용하실 겁니다. <a href="http://flask.pocoo.org">Flask</a>에서는 <a href="http://flask.pocoo.org/docs/api/#flask.session"><code>session</code></a>객체를 지원합니다.</p>
+
+<script src="https://gist.github.com/1616353.js"> </script>
+
+
+<p><a href="http://flask.pocoo.org">Flask</a>는 기본적으로 시큐어 쿠키(Secure Cookie)를 통해 세션을 구현하는데 길이에 제한이 있습니다. 때문에 파일이나 DB기반의 세션을 구현하려면 <a href="http://beaker.readthedocs.org/en/latest/index.html">Beaker</a>와 같은 프레임워크를 통한 확장이 필요합니다.(하지만 이 또한 매우 쉽습니다.)</p>
+</div>
+
+<p style="float: right;">2012-01-16</p>
+
+<hr style="clear: both;" />
+<div class="post-footer"><a href="/">◀ List</a></div>
+
+<div id="disqus_thread" class="margin-auto"></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'spoqablog'; // required: replace example with your forum shortname
+var disqua_identifier = 'Flask로 만들어 보는 WSGI 어플리케이션';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+ var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div>
+    <div class="push">
+    </div>
+  </div>
+
+  <div style="margin-bottom: 50px;" class="footer">
+    <hr style="margin-top: 20px; margin-bottom: 20px;" />
+    <div id="info">
+      <span>© Spoqa Inc. All rights reserved.</span>
+      <span>powerd by <a style="color: gray;" href="http://pages.github.com/">pages</a></span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+

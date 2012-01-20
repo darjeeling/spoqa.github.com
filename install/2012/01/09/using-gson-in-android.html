@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<meta name="viewport" content="width=device-width; initial-scale=2.0; maximum-scale=1.0; user-scalable=0;" />
+
+<title>Spoqa Tech Blog</title>
+<link rel="stylesheet" href="/css/styles.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+<script src="http://www.google.com/jsapi"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+ google.load( "webfont", "1" );
+ google.setOnLoadCallback(function() {
+  WebFont.load({ custom: {
+   families: [ "NanumGothic" ],
+   urls: [ "http://fontface.kr/NanumGothic/css" ]
+  }});
+ });
+
+/*
+$('a').hover(
+  function(obj) {
+    alert('in');
+  },
+  function(obj) {
+    alert('out');
+  }
+);
+*/
+
+</script>
+
+
+<meta property="og:title" content="Java의 json 라이브러리 google-gson"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="http://spoqa.github.com/2012/01/09/using-gson-in-android.html"/>
+<meta property="og:site_name" content="Spoqa Tech Blog"/>
+<meta property="og:description"
+      content="안드로이드 주소록을 다루며 애먹었던 경험을 소개하고 간단하게 json라이브러리 google-gson 사용법을 소개합니다."/>
+
+<meta property="og:image" content="http://www.gravatar.com/avatar/52813188698089bda7e20154c114d17e.png"/>
+</head>
+<body>
+<div class="content-body">
+  <div class="wrapper">
+    <div class="header">
+      <a href="http://spo.qa/get"><img src="/images/logo.png" style="margin-top: 10px; padding-right: 15px; vertical-align: middle;" /></a><a href="/" style="
+      font-family: arial;
+      font-weight: bold;
+      font-size: 40px;
+      color: white;
+      text-shadow: 0px 1px 1px #333;
+      display: inline-block;
+      ">Tech Blog</a>
+      <ol id="menu-list">
+          
+            <li><a href="/about.html">About</a></li><span class="seperator">&nbsp;/</span>
+          
+          
+            <li><a class="selected" href="/index.html">Blog</a></li><span class="seperator">&nbsp;/</span>
+          
+
+          
+            <li><a href="/job.html">We're hiring!</a></li><span class="seperator">&nbsp;/</span>
+          
+          <li><a href="https://github.com/spoqa">github</a></li>
+          <li><a href="/atom.xml"><img class="atom-img" src="/images/atom.png" /></a></li>
+        </ol>
+    </div>
+  
+    <hr style="margin-top: 20px; margin-bottom: 20px;" />
+
+    <div class="content">
+      <h1 class="post-title">Java의 json 라이브러리 google-gson</h1>
+
+
+<div class="post-author-info">
+    <img class="portrait" src="/images/profile/akaz@spoqa.com.png" />
+  
+    <span class="author-name"><a href="mailto:akaz@spoqa.com">akaz</a></span>  
+  
+</div>
+
+
+
+  <div class="post"><h2>문제 상황</h2>
+
+<hr />
+
+<p>안드로이드 어플리케이션을 개발하다 보면 주소록을 다루는 일이 종종 있습니다. 어플리케이션에서 주소록에 관련된 정보를 접근할 일이 있는 어플이라면 <a href="http://developer.android.com/reference/android/content/ContentResolver.html">ContentResolver</a>를 통해 단말의 주소록에 접근해서 필요한 정보를 가져오게 됩니다.</p>
+
+<p>그런데, 최근 개발하고 있는 <a href="http://spo.qa/get">스포카</a> 어플을 통해 아주 많은 사람의 연락처가 저장된 주소록을 가지고 이런 저런 로직을 실행하는 상황을 테스트 하다보니, <a href="http://developer.android.com/reference/java/lang/OutOfMemoryError.html">OutOfMemory(OOM)</a>에러가 발생하는 현상을 볼 수 있었습니다. 모바일 디바이스들은 PC와 다르게 자원이 제한적이기 때문에 어떻게 하면 <a href="http://developer.android.com/reference/java/lang/OutOfMemoryError.html">OOM</a>을 일으키지 않을 수 있을까 라는 고민을 해야 하는 상황이었습니다.</p>
+
+<p>대강 문제가 되었던 클라이언트 사이드의 로직을 살펴보면 이렇습니다.</p>
+
+<ol>
+<li>단말의 주소록에 접근하여 필요한 정보를 추출 후 서버에 전송</li>
+<li>서버에서 정보를 가공하여 필요한 <a href="http://www.json.org">json</a> 문자열을 생성 후 반환, 이 문자열은 주소록에서 보낸 정보의 양에 비례해서 늘어나게 됩니다.</li>
+<li>클라이언트 측에서 서버 측에서 보낸 <a href="http://www.json.org">json</a> 문자열을 이용하여 <a href="http://developer.android.com/reference/org/json/JSONObject.html">JSONObject</a>객체를 만든 후 이 <a href="http://developer.android.com/reference/org/json/JSONObject.html">JSONObject</a>를 이용 리스트 완성</li>
+</ol>
+
+
+<p><a href="http://www.eclipse.org">eclipse</a>의 <a href="http://eclipse.org/mat/">MAT(Memory Analyzer)</a>을 이용하여 어느 시점에서 <a href="http://developer.android.com/reference/java/lang/OutOfMemoryError.html">OOM</a>이 일어나는지를 추측해보았습니다. 서버에서 보내준 <a href="http://www.json.org">json</a>형식의 문자열을 <a href="http://developer.android.com/reference/java/net/HttpURLConnection.html">HttpURLConnection</a>을 통해 전달받고 이를 <a href="http://developer.android.com/reference/java/lang/StringBuilder.html">StringBuilder</a>를 이용하여 완전한 문자열으로 만들던 도중에 <a href="http://developer.android.com/reference/java/lang/OutOfMemoryError.html">OOM</a>이 일어나는 것으로 의심되었는데 이 때문에 <a href="http://developer.android.com/reference/org/json/JSONObject.html">JSONObject</a>의 생성자에 <a href="http://www.json.org">json</a> 문자열을 전달하기도 전에 메모리가 가득 차 버리니 매우 난감한 상황이었습니다.</p>
+
+<p>대게 주소록에 사람이 그렇게 많지 않으므로 (200~500명 정도) 아무런 문제가 없었지만 10000명 정도의 더미데이터를 주소록에 저장하고 테스트하다 보니 append 메서드를 호출하다 <a href="http://developer.android.com/reference/java/lang/OutOfMemoryError.html">OOM</a>에러를 뱉으면서 어플이 종료되었습니다. 문제는 append 메서드를 호출 시 <a href="http://developer.android.com/reference/java/lang/StringBuilder.html">StringBuilder</a>의 capacity를 넘을 경우 내부적으로는 메모리 재할당과 copy과정이 일어난다는 것이었습니다. 그렇다고 초기 <a href="http://developer.android.com/reference/java/lang/StringBuilder.html">StringBuilder</a>생성시 capacity를 무작정 높게 잡기도 애매한 상황이었습니다.</p>
+
+<h2>gson</h2>
+
+<hr />
+
+<p><a href="http://code.google.com/p/google-gson/">gson</a>은 Java객체를 <a href="http://www.json.org">json</a>형식으로 변환하고 그 역으로도 변환할 수 있도록 도와주는 라이브러리입니다. <a href="http://code.google.com/p/google-gson/">gson</a>의 사용법이 궁금하다면 <a href="https://sites.google.com/site/gson/gson-user-guide">gson user guide</a>를 읽어보면 되고 api가 궁금하다면 <a href="http://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/index.html">gson api document</a>를 참조하면 됩니다.</p>
+
+<h2>gson 적용</h2>
+
+<hr />
+
+<script src="https://gist.github.com/1580601.js?file=gistfile1.py">  </script>
+
+
+<p>대략 이런 방식으로 프로젝트에 <a href="http://code.google.com/p/google-gson/">gson</a>라이브러리를 적용하였고, <a href="http://developer.android.com/reference/java/net/HttpURLConnection.html">HttpURLConnection</a>을 통해 받아온 <a href="http://developer.android.com/reference/java/io/InputStream.html">InputStream</a>을 이용 바로 객체를 생성할 수 있었습니다. 이전에 <a href="http://developer.android.com/reference/java/lang/StringBuilder.html">StringBuilder</a>를 이용할때 생기는 오버헤드가 사라진 셈이죠. 위와 같은 방식으로 <a href="http://developer.android.com/reference/java/lang/OutOfMemoryError.html">OOM</a>이 생기는 문제 상황을 해결 할 수 있었습니다.</p>
+
+<p>위의 예는 상황을 최대한 단순화하여 설명하려고 작성한 예제이고 이 <a href="http://www.softwarepassion.com/android-series-parsing-json-data-with-gson/">사이트</a>를 통해 더 상세하게 설명된 사용예를 보실 수 있습니다.</p>
+</div>
+
+<p style="float: right;">2012-01-09</p>
+
+<hr style="clear: both;" />
+<div class="post-footer"><a href="/">◀ List</a></div>
+
+<div id="disqus_thread" class="margin-auto"></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'spoqablog'; // required: replace example with your forum shortname
+var disqua_identifier = 'Java의 json 라이브러리 google-gson';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+ var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+ dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </div>
+    <div class="push">
+    </div>
+  </div>
+
+  <div style="margin-bottom: 50px;" class="footer">
+    <hr style="margin-top: 20px; margin-bottom: 20px;" />
+    <div id="info">
+      <span>© Spoqa Inc. All rights reserved.</span>
+      <span>powerd by <a style="color: gray;" href="http://pages.github.com/">pages</a></span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
+
