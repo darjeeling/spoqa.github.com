@@ -106,6 +106,9 @@ font-size: 24px;
 
 /* blog */
 
+.post hr {
+margin-bottom: 20px;
+}
 .post-author-info {
 margin-top: 20px;
 margin-bottom: 20px;
@@ -136,8 +139,9 @@ max-width: 100%;
 display: block;
 }
 
-.post ol, li {
+.post ol, ul {
 line-height: 1.8em;
+margin-bottom: 20px;
 }
 
 .post-title {
