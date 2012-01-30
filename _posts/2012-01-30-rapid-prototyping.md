@@ -34,7 +34,7 @@ publish: false
 아래는 주요 언어에서 볼 수 있는 마이크로 프레임워크입니다.
 
  - [Sinatra](http://www.sinatrarb.com/) ([Ruby])
- - [Flask] ([Python])
+ - [Flask](http://flask.pocoo.org/) ([Python])
  - [Express](http://expressjs.com/) ([Node.js])
 
 이 외에도 [Sinatra style microframework](http://bit.ly/ynbOfn)을 검색해보시면 여러 언어에서 비슷한 형태로 구현된 마이크로 프레임워크를 보실 수 있습니다.
