@@ -4,7 +4,6 @@ title: 빠른 프로토타이핑을 위한 도구 소개
 author: JC Kim
 author-email: shinvee@spoqa.com
 description: 스포카 팀은 매장에서부터 페이스북, 트위터까지 이어지는 총체적인 경험 선을 시험하기 위해 프로토타이핑에 많은 고민을 하였습니다. 이번 글에선 프로토타이핑을 빠르게 할 수 있게 도와주는 도구들을 소개합니다. 
-publish: false
 ---
 
 
@@ -44,9 +43,9 @@ publish: false
 ---
 기본적인 기능들을 빠르게 구현하였다면 이를 활용할 사용자 인터페이스를 만들어야 합니다. 하지만 웹 서비스나 웹뷰를 기반으로 하는 서비스를 만든다면 HTML/CSS/JS 기반의 디자인을 하는 일도 상당히 시간이 많이 필요한 일입니다. 이 때, 각 목적에 맞는 툴킷들을 이용한다면 디자인을 크게 고민하지 않으면서도 보기 좋은 서비스를 만들어 볼 수 있습니다.
 
-[Bootstrap from Twitter]는 디자인에 대한 여러 가지 기초적인 고민을 상당히 잘 흡수해주는 훌륭한 툴킷입니다. 크로스 브라우징을 지원하며, 우리가 쓰는 컴포넌트 대부분에 대해 심미적으로, 기능적으로 우수한 디자인을 제공합니다. 그리드 인터페이스를 제공해서 레이아웃도 간편하게 잡을 수 있으며, 곧 출시 예정인 2.0에선 [Responsive Design]도 정식으로 지원하고 있습니다. 
+[Bootstrap from Twitter]는 디자인에 대한 여러 가지 기초적인 고민을 상당히 잘 흡수해주는 훌륭한 툴킷입니다. 크로스 브라우징을 지원하며, 우리가 쓰는 컴포넌트 대부분에 대해 심미적으로, 기능적으로 우수한 디자인을 제공합니다. 그리드 인터페이스를 제공해서 레이아웃도 간편하게 잡을 수 있으며, 곧 출시 예정인 2.0에선 [반응형 디자인]도 정식으로 지원하고 있습니다. 
 
-Bootstrap은 [LESS]로도 제공해주기 때문에, 디자인 튜닝이 간편하고 Mixin을 활용해 의미적인 HTML 마크업을 하면서 디자인을 적용할 수도 있습니다.
+Bootstrap은 [LESS]로도 제공해주기 때문에, 디자인 튜닝이 간편하고 [Mixin](http://lesscss.org/#-mixins)을 활용해 의미적인 HTML 마크업을 하면서 디자인을 적용할 수도 있습니다.
 
 위의 툴킷과 같은 인터페이스를 가지고 디자인만 [Facebook] 형태로 바꾼 [Fbootstrapp]도 있습니다. Facebook 앱을 만든다면 이쪽을 쓰시는 편이 더 좋을 것 같습니다.
 
@@ -57,11 +56,11 @@ Bootstrap은 [LESS]로도 제공해주기 때문에, 디자인 튜닝이 간편�
 모든 기능을 직접 전부 구현할 필요는 없습니다. 여러 회사에서 한 두 줄의 추가만으로 사용할 수 있는 서비스를 제공하고 있습니다. [Google]은 특히 [Maps API](http://code.google.com/intl/ko/apis/maps/index.html), [Chart Tools](http://code.google.com/intl/ko/apis/chart/), [QR Code][Google Infographics], [Font API](https://developers.google.com/webfonts/) 등 개발에 도움이 되는 수많은 기능들을 간단한 API로 쓸 수 있게끔 공개하고 있으며, [Facebook] 또한 [소셜 플러그인](https://developers.facebook.com/docs/plugins/)으로 다양한 소셜 도구들([Like Button](https://developers.facebook.com/docs/reference/plugins/like), [Comments](https://developers.facebook.com/docs/reference/plugins/comments), [Registration](https://developers.facebook.com/docs/plugins/registration/) 등)을 제공하고 있습니다. 이런 서비스들을 잘 알고 있다면 가끔은 단지 여러 서비스 기능을 연결하는 것만으로 새로운 서비스를 만들 수 있기도 합니다.
 
 
-## 서비스 배포는 PaaS를 활용하자
+## 서비스 배포는 Platform as a Service(PaaS)를 활용하자
 ---
 위 도구의 협력으로 서비스를 만들었다면 이제 배포를 해야 합니다. 어디서나 접근할 수 있는 공용 서버에 서비스를 올리고, 서버를 세팅하고, 도메인을 연결해야 합니다. 이 과정들 또한 시간을 많이 필요로 하는 일들입니다.
 
-최근 [Heroku]를 시작으로 미국에서 [Amazon Web Service]를 기반으로 한 많은 [PaaS]가 출시되고 있습니다. 이 서비스들은 대체로 **[Failover System], 쉬운 서비스 규모 스케일링, 잘 설계된 서버 스택, 편리한 배포환경**을 강점으로 내세우고 있으며, 특히 처음 사용자가 가입부터 서비스 배포까지 아주 간편하고 빠른 속도로 진행할 수 있게끔 도구를 제공하고 있습니다. 게다가, 대부분 무료 플랜이 존재하기 때문에 비용 부담이 없다는 장점도 가지고 있습니다.
+최근 [Heroku]를 시작으로 미국에서 [Amazon Web Service]를 기반으로 한 많은 [Platform as a Service][PaaS]가 출시되고 있습니다. 이 서비스들은 대체로 **[Failover System], 쉬운 서비스 규모 스케일링, 잘 설계된 서버 스택, 편리한 배포환경**을 강점으로 내세우고 있으며, 특히 처음 사용자가 가입부터 서비스 배포까지 아주 간편하고 빠른 속도로 진행할 수 있게끔 도구를 제공하고 있습니다. 게다가, 대부분 무료 플랜이 존재하기 때문에 비용 부담이 없다는 장점도 가지고 있습니다.
 
 [Heroku]의 서비스 배포 과정을 보시면 그 과정이 얼마나 편리한지 쉽게 알 수 있습니다.
 
@@ -78,7 +77,7 @@ Bootstrap은 [LESS]로도 제공해주기 때문에, 디자인 튜닝이 간편�
 
 ## 저장소 이용
 ---
-아무리 빠르게 하고 싶다고 해도 저장소는 두고 하세요. 개인이 작업하는 것이라면 로컬에서도 저장소 관리가 가능한 [DVCS] ([git], [mercurial])로 바로 이용하시고, 2명 이상이 동시에 작업한다면 반드시 저장소 호스팅 서비스를 이용해서 작업하시기 바랍니다. 변경사항을 공유하는 방법에 대해 버전 컨트롤 시스템 외의 방식보다 빠르고 깔끔한 방법은 아직까진 없기 때문입니다.
+아무리 빠르게 하고 싶다고 해도 저장소는 두고 하세요. 개인이 작업하는 것이라면 로컬에서도 저장소 관리가 가능한 [분산형 버전관리 시스템][DVCS] \([git], [mercurial]\)로 바로 이용하시고, 2명 이상이 동시에 작업한다면 반드시 저장소 호스팅 서비스를 이용해서 작업하시기 바랍니다. 변경사항을 공유하는 방법에 대해 버전관리 시스템보다 빠르고 깔끔한 방법은 아직까진 없기 때문입니다.
 
 저장소 호스팅은 많은 곳에서 제공해주고 있지만, 돈을 조금 투자해서 [Github]를 쓰시는 것을 추천해 드립니다. 저장소뿐만이 아닌 훌륭한 협업 플랫폼을 제공해주고 있기 때문입니다. 당장은 무료로 시작해야 한다면 [Bitbucket]의 무료 비공개 저장소를 이용하는 것도 좋은 방법니다.
 
@@ -112,7 +111,7 @@ Bootstrap은 [LESS]로도 제공해주기 때문에, 디자인 튜닝이 간편�
   [Google]: http://google.com/
   [Facebook]: http://facebook.com/
   [Bootstrap from Twitter]: http://twitter.github.com/bootstrap/
-  [Responsive Design]: http://www.alistapart.com/articles/responsive-web-design/
+  [반응형 디자인]: http://www.alistapart.com/articles/responsive-web-design/
   [Fbootstrapp]: http://ckrack.github.com/fbootstrapp/
   [jQuery Mobile]: http://jquerymobile.com/
   [Failover System]: http://en.wikipedia.org/wiki/Failover
