@@ -30,13 +30,11 @@ description: 스포카 팀은 매장에서부터 페이스북, 트위터까지 �
 
 <script src="https://gist.github.com/1694116.js?file=gistfile1.txt"> </script>
 
-아래는 주요 언어에서 볼 수 있는 마이크로 프레임워크입니다.
+아래는 주요 언어에서 볼 수 있는 마이크로 프레임워크입니다. 이 외에도 [Sinatra style microframework](http://bit.ly/ynbOfn)을 검색해보시면 여러 언어에서 비슷한 형태로 구현된 마이크로 프레임워크를 보실 수 있습니다.
 
  - [Sinatra](http://www.sinatrarb.com/) ([Ruby])
  - [Flask](http://flask.pocoo.org/) ([Python])
  - [Express](http://expressjs.com/) ([Node.js])
-
-이 외에도 [Sinatra style microframework](http://bit.ly/ynbOfn)을 검색해보시면 여러 언어에서 비슷한 형태로 구현된 마이크로 프레임워크를 보실 수 있습니다.
 
 스포카팀에서는 [Flask]를 즐겨쓰고 있습니다. Flask에 관심이 있으시다면 [지난 기술 블로그의 소개글](http://spoqa.github.com/2012/01/16/wsgi-and-flask.html)을 참조해주세요.
 
