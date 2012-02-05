@@ -134,6 +134,10 @@ color: #666;
 margin-bottom: 10px;
 }
 
+.post a {
+font-weight: bold;
+}
+
 .post img {
 max-width: 100%;
 display: block;
