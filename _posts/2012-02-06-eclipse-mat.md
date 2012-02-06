@@ -4,7 +4,6 @@ title: Eclipse Memory Analyzer 소개
 author: akaz
 author-email: akaz@spoqa.com
 description: Eclipse Memory Analyzer(MAT)을 소개하고 유용하게 쓸 수 있는 기능들을 알아봅니다.
-publish: false
 ---
 
 안드로이드 개발을 하다보면 종종 [OutOfMemory(OOM)][OOM]에러를 만나게 됩니다. [이전에 올렸던 포스팅](http://spoqa.github.com/2012/01/09/using-gson-in-android.html)에서도 이 문제로 고생을 했는데요, 메모리 누수 관련 문제는 로직 에러와는 달라서 찾기가 매우 난감한 경우가 많습니다. 이러한 메모리 누수 관련 문제를 해결하기 위한 검사 기능을 제공하는 무료 툴이 있습니다. 바로 [Eclipse MAT(Memory Analyzer)(MAT)][MAT]입니다.
