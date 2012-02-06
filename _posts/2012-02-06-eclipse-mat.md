@@ -7,26 +7,34 @@ description: Eclipse Memory Analyzer(MAT)을 소개하고 유용하게 쓸 수 �
 publish: false
 ---
 
-안드로이드 개발을 하다보면 종종 [OutOfMemory(OOM)][OOM]에러를 만나게 됩니다. [이전에 올렸던 포스팅](http://spoqa.github.com/2012/01/09/using-gson-in-android.html)에서도 이 문제로 고생을 했는데요, 메모리 관련 문제는 로직 에러와는 달라서 찾기가 매우 난감한 경우가 많습니다. 이러한 메모리 관련 문제를 해결하기 위한 검사 기능을 제공하는 무료 툴이 있습니다. 바로 [Eclipse MAT(Memory Analyzer)(MAT)][MAT]입니다.
+안드로이드 개발을 하다보면 종종 [OutOfMemory(OOM)][OOM]에러를 만나게 됩니다. [이전에 올렸던 포스팅](http://spoqa.github.com/2012/01/09/using-gson-in-android.html)에서도 이 문제로 고생을 했는데요, 메모리 누수 관련 문제는 로직 에러와는 달라서 찾기가 매우 난감한 경우가 많습니다. 이러한 메모리 누수 관련 문제를 해결하기 위한 검사 기능을 제공하는 무료 툴이 있습니다. 바로 [Eclipse MAT(Memory Analyzer)(MAT)][MAT]입니다.
 
 ![Eclipse MAT](/images/eclipse-mat/mat_thumb.png)
 
 ## Eclipse MAT
 ---
-[MAT]은 사용자로 하여금 힙 메모리의 상황을 파악하게 해주어 Memory leak 현상과 필요없는 메모리 할당을 감지할 수 있도록 도와줍니다. 또한 자동으로 보고서를 작성하여 어떤 객체들이 Memory leak을 일으키는지에 대한 추측을 해주는 기능을 제공합니다. [MAT]은 [Eclipse] 플러그인이기 때문에 사용하려면 Eclipse가 깔려 있어야 합니다. [MAT]을 설치하려면 [MAT 다운로드 페이지](http://eclipse.org/mat/downloads.php)에서 자신의 Eclipse버전에 맞는 파일을 받으시면 됩니다. 
+[MAT]은 사용자로 하여금 힙 메모리의 상황을 파악하게 해주어 메모리 누수 현상과 필요없는 메모리 할당을 감지할 수 있도록 도와줍니다. 또한 자동으로 보고서를 작성하여 어떤 객체들이 메모리 누수를 일으키는지에 대한 추측을 해주는 기능을 제공합니다. [MAT]은 [Eclipse] 플러그인이기 때문에 사용하려면 Eclipse가 깔려 있어야 합니다. [MAT]을 설치하려면 [MAT 다운로드 페이지](http://eclipse.org/mat/downloads.php)에서 자신의 Eclipse버전에 맞는 파일을 받으시면 됩니다. 
 
 ## How to use MAT
 ---
-MAT을 설치하였다면 Eclipse화면에서 MAT관련 탭이 뜹니다. 탭을 클릭 하고 File -> Open Heap Dump를 누르면 힙 상황이 기록 된 hprof파일을 읽어올 수 있습니다.
+MAT을 설치하였다면 Eclipse화면에서 MAT관련 탭이 뜹니다. 탭을 클릭 하고 
+     
+    File -> Open Heap Dump
+
+를 누르면 힙 상황이 기록 된 [hprof]파일을 읽어올 수 있습니다.
 
 ![MAT tab](/images/eclipse-mat/mat_tab.png)
 ![Open Heap Dump](/images/eclipse-mat/open_heapdump.png)
 
-탭이 뜨지 않는다면 Window -> Open Perspective -> Other에서 Memory Analysis를 누르면 탭이 뜨는 것을 볼 수 있습니다.
+탭이 뜨지 않는다면 
+
+    Window -> Open Perspective -> Other에서 Memory Analysis
+
+를 누르면 탭이 뜨는 것을 볼 수 있습니다.
 
 ![perspective](/images/eclipse-mat/perspective_memory_analysis.png)
 
-hprof 파일을 읽어오면 분석을 시작하고 결과를 Overview 화면에 보여줍니다. 
+[hprof] 파일을 읽어오면 분석을 시작하고 결과를 Overview 화면에 보여줍니다. 
 
 ![Overview screen](/images/eclipse-mat/overview.png)
 
@@ -61,21 +69,21 @@ Dominator tree를 띄우면 현재 덤프 된 매모리 스냅 샷 중 가장 �
 
 ## Android에서 MAT사용법
 ---
-먼저 안드로이드 기기에서 힙 덤프를 수행하여 hprof파일을 생성해야 합니다. hprof파일을 생성하기 위해서 간단하게 취할 수 있는 2가지 방법이 있습니다.
+먼저 안드로이드 기기에서 힙 덤프를 수행하여 [hprof]파일을 생성해야 합니다. [hprof]파일을 생성하기 위해서 간단하게 취할 수 있는 2가지 방법이 있습니다.
 
 ### 1. DDMS를 이용한 추출
 ---
-Eclipse의 [DDMS]를 이용하여 힙 덤프를 추출할 수 있습니다. 아 방법을 쓰려면 앱의 메니페스트 파일에 [WRITE_EXTERNAL_STORAGE 권한](http://developer.android.com/reference/android/Manifest.permission.html#WRITE_EXTERNAL_STORAGE)을 부여해야 하며, sdcard에 쓸 수 있는 권한이 있어야 합니다. 이 방법을 통해 sdcard경로에 앱 패키지명의 hprof파일이 생성됩니다.
+Eclipse의 [DDMS]를 이용하여 힙 덤프를 추출할 수 있습니다. 아 방법을 쓰려면 앱의 메니페스트 파일에 [WRITE_EXTERNAL_STORAGE 권한](http://developer.android.com/reference/android/Manifest.permission.html#WRITE_EXTERNAL_STORAGE)을 부여해야 하며, sdcard에 쓸 수 있는 권한이 있어야 합니다. 이 방법을 통해 sdcard경로에 앱 패키지명의 [hprof]파일이 생성됩니다.
 
 ![DDMS Heap Dump](/images/eclipse-mat/ddms_heapdump.png)
 
 ### 2. Heap dump method
 ---
-안드로이드 API에서 제공하는 메서드 중에 hprof파일을 생성하는 메서드인 [dumpHprofData](http://developer.android.com/reference/android/os/Debug.html#dumpHprofData(java.lang.String\))가 있습니다. 이 메서드는 [Debug] 클래스의 메서드인 것을 알 수 있는데, 이 [Debug] 클래스에는 앱의 상태를 점검할 수 있는 여러 유용한 메서드가 있으므로 나중에 필요하면 사용할 수 있도록 익혀두면 좋습니다.
+안드로이드 API에서 제공하는 메서드 중에 [hprof]파일을 생성하는 메서드인 [dumpHprofData](http://developer.android.com/reference/android/os/Debug.html#dumpHprofData(java.lang.String\))가 있습니다. 이 메서드는 [Debug] 클래스의 메서드인 것을 알 수 있는데, 이 [Debug] 클래스에는 앱의 상태를 점검할 수 있는 여러 유용한 메서드가 있으므로 나중에 필요하면 사용할 수 있도록 익혀두면 좋습니다.
 
 ### Android hporf 파일 변환
 ---
-앞서 설명한 방법을 적용하여 hprof파일을 추출하였어도 안드로이드에서 추출한 hprof파일은 [MAT]에서 받아들이는 일반적인 hprof포맷과 다르기 때문에 먼저 변환하는 과정이 필요합니다. 이러한 기능을 제공하는 것이 기본 SDK에 포함된 hprof-conv유틸입니다. 이 유틸은 SDK폴더 내의 tools폴더 안에 있는데 사용하려면 콘솔에서
+앞서 설명한 방법을 적용하여 [hprof]파일을 추출하였어도 안드로이드에서 추출한 [hprof]파일은 [MAT]에서 받아들이는 일반적인 [hprof]포맷과 다르기 때문에 먼저 변환하는 과정이 필요합니다. 이러한 기능을 제공하는 것이 기본 SDK에 포함된 hprof-conv유틸입니다. 이 유틸은 SDK폴더 내의 tools폴더 안에 있는데 사용하려면 콘솔에서
 
     $ hprof-conv <안드로이드용 hprof 파일> <변환할 hprof 파일>
 
@@ -97,3 +105,4 @@ Eclipse의 [DDMS]를 이용하여 힙 덤프를 추출할 수 있습니다. 아 
 [OOM]: http://developer.android.com/reference/java/lang/OutOfMemoryError.html 
 [Debug]: http://developer.android.com/reference/android/os/Debug.html
 [DDMS]: http://developer.android.com/guide/developing/debugging/ddms.html
+[hprof]: http://java.sun.com/developer/technicalArticles/Programming/HPROF.html
