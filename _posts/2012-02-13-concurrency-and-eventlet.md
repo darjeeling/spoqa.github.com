@@ -52,7 +52,9 @@ description: 비동기 통신을 지원하는 라이브러리인 eventlet과 그
 
 [코루틴]은 우리가 잘 알고 있는 [서브루틴(Subroutine)][서브루틴]과 달리 진입점(Entry Point)이 여러 개일 수 있습니다. 쉽게 이야기하면 실행을 멈췄다가(Suspend) 재개(Resume)할 수 있다는 점인데요. 이 특성을 살리면 우리가 익히 아는 [스레드(Thread)][스레드]처럼 쓸 수 있게 됩니다. 다만 [스레드]와 달리 [코루틴]은 [비선점적(Non-Preemptive)](http://en.wikipedia.org/wiki/Nonpreemptive_multitasking)이기때문에 코드의 흐름을 전적으로 사용자가 제어할 수 있습니다.
 
-하지만 불행히도 모든 언어에서 이런 [코루틴]이 지원되진 않습니다. [greenlet]은 이런 [코루틴]을 [CPython]에서 지원하기 위해 작성된 라이브러리입니다.
+![coroutines](/images/concurrency-and-eventlet/coroutines.png)
+
+하지만 불행히도 모든 언어에서 이런 [코루틴]이 지원되진 않습니다. [greenlet]은 이런 [코루틴]을 [CPython]에서 지원하기 위해 작성된 라이브러리입니다. 
 
 ## [eventlet]
 ---
@@ -71,7 +73,14 @@ description: 비동기 통신을 지원하는 라이브러리인 eventlet과 그
 
 <script src="https://gist.github.com/1808724.js"> </script>
 
-정말 짧죠?
+정말 적죠? 조금만 구체적으로 살펴보죠. 우선 [<code>eventlet.monkey_patch</code>]는 <code>socket</code>이나 <code>select</code>등의 [Python] 표준 라이브러리를 <code>eventlet.green</code> 패키지안에 정의된 [코루틴] 친화적인 모듈들로 바꿔치기 합니다. 
+
+<script src="https://gist.github.com/1812372.js"> </script>
+
+이렇게 바꿔치기된 <code>eventlet.green</code>안의 모듈들은 I/O에 의해 블럭되는 경우 다른 코루틴에 제어권을 넘기는 식으로 지연을 방지합니다.
+
+![with_coroutines](/images/concurrency-and-eventlet/with_coroutines.png)
+
 
 # 다른 대안들
 ---
