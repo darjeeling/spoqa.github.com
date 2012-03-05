@@ -6,7 +6,7 @@ author-email: akaz@spoqa.com
 description: Eclipse의 디버거의 사용 방법을 소개합니다.
 ---
 
-꽤 많은 분들이 디버거의 존재 자체를 모르고 있거나 혹은 디버거가 있다는 사실은 알아도 그 효용성에 의문을 제기하곤 합니다. 왜냐하면, 우리에겐 Log 클래스나 혹은 printf같은 훌륭한(?) 디버깅 도구가 있다고 생각하기 때문이죠. 물론 이렇게 필요한 변수를 찍어보면서 어떤 곳에서 버그가 있는지를 알아보는 일이 잘못된 일은 아닙니다만 복잡한 여러 상황이 맞물려 재현되는 버그는 이러한 고전적인(?) 방법을 써서 알아보기가 매우 어렵습니다.
+꽤 많은 분들이 디버거의 존재 자체를 모르고 있거나 혹은 디버거가 있다는 사실은 알아도 그 효용성에 의문을 제기하곤 합니다. 왜냐하면, 우리에겐 <code>Log</code> 클래스나 혹은 <code>printf</code>같은 훌륭한(?) 디버깅 도구가 있다고 생각하기 때문이죠. 물론 이렇게 필요한 변수를 찍어보면서 어떤 곳에서 버그가 있는지를 알아보는 일이 잘못된 일은 아닙니다만 복잡한 여러 상황이 맞물려 재현되는 버그는 이러한 고전적인(?) 방법을 써서 알아보기가 매우 어렵습니다.
 
 원인을 정확히 그리고 빨리 파악하려면 디버거의 사용법을 숙지하고 사용하는 것이 가장 좋습니다. 대부분의 개발 환경에서 디버거를 제공하는데 다행히 [이클립스]에서도 쓸만한 디버거를 내장하고 있습니다.
 
@@ -40,19 +40,19 @@ description: Eclipse의 디버거의 사용 방법을 소개합니다.
 
 ## 스텝 단위 진행
 ---
-브레이크 포인트에 당도하여 디버거가 작동하게 되면 이제 그 라인부터 스텝 단위의 진행을 할 수 있게 됩니다.
+지정한 브레이크 포인트에 다다르면 동시에 디버거가 작동하게 되고 그 라인부터 스텝 단위의 진행을 할 수 있게 됩니다.
 
 ![debug-ui](/images/eclipse-debugger/debug-ui.png)
 
 이제 이 뷰의 버튼들을 이용하여 현재 상황을 진행하거나 되돌릴 수 있습니다. 자주 사용하는 버튼의 사용법을 알아보면
 
-* ① Resume : 다음 브레이크 포인트를 만날때까지 진행합니다.
-* ② Suspend : 현재 작동하고 있는 쓰레드를 멈춥니다.
-* ③ Terminate : 프로그램을 종료합니다.
-* ④ Step Into : 메서드가 존재할 경우 그 안으로 들어가 메서드 진행 상황을 볼 수 있도록 합니다.
-* ⑤ Step Over : 다음 라인으로 이동합니다. 메서드가 있어도 그냥 무시하고 다음 라인으로 이동합니다.
-* ⑥ Step Return : 현 메서드에서 바로 리턴합니다.
-* ⑦ Drop to Frame : 메서드를 처음부터 다시 실행합니다.
+1. Resume : 다음 브레이크 포인트를 만날때까지 진행합니다.
+2. Suspend : 현재 작동하고 있는 쓰레드를 멈춥니다.
+3. Terminate : 프로그램을 종료합니다.
+4. Step Into : 메서드가 존재할 경우 그 안으로 들어가 메서드 진행 상황을 볼 수 있도록 합니다.
+5. Step Over : 다음 라인으로 이동합니다. 메서드가 있어도 그냥 무시하고 다음 라인으로 이동합니다.
+6. Step Return : 현 메서드에서 바로 리턴합니다.
+7. Drop to Frame : 메서드를 처음부터 다시 실행합니다.
 
 등이 있습니다. 
 
@@ -68,7 +68,7 @@ description: Eclipse의 디버거의 사용 방법을 소개합니다.
 
 ![copy-var](/images/eclipse-debugger/copy-var.png)
 
-편집 창으로 돌아가 변수에서 Command + shift + i를 누르게 되면(혹은 오른 클릭 후 Inspect를 선택) Inspector 창이 뜨게 됩니다. 이 창에서 다시 한번 Command + shift + i를 누르면 해당 변수를 Expression 뷰로 보내게 되고 이곳에서 지속해서 변수의 상태를 관찰할 수 있게 됩니다.
+편집 창으로 돌아가 변수에서 <code>Command + shift + i</code>를 누르게 되면(혹은 오른 클릭 후 Inspect를 선택) Inspector 창이 뜨게 됩니다. 이 창에서 다시 한번 <code>Command + shift + i</code>를 누르면 해당 변수를 Expression 뷰로 보내게 되고 이곳에서 지속해서 변수의 상태를 관찰할 수 있게 됩니다.
 
 ![inspector](/images/eclipse-debugger/inspector.png)
 
@@ -106,7 +106,7 @@ Expression 뷰에서는 변수 이름을 입력하거나 수행해보고 싶은 
 
 ![breakpoint-condition](/images/eclipse-debugger/breakpoint-condition.png)
 
-또 hit count를 이용하여 조건을 걸 수도 있습니다. hit count에 값을 적용하면 해당 라인에 브레이크 포인트가 hit count만큼 잡힌 이후 디버깅 화면으로 전환하게 됩니다. hit count 옵션은 반복문에서 한 100번쯤 이후에 디버깅을 시작하고 싶거나 하는 일이 생길 때 유용하게 쓸 수 있습니다.
+또 <code>hit count</code>를 이용하여 조건을 걸 수도 있습니다. <code>hit count</code>에 값을 적용하면 해당 라인에 브레이크 포인트가 <code>hit count</code>만큼 잡힌 이후 디버깅 화면으로 전환하게 됩니다. <code>hit count</code> 옵션은 반복문에서 한 100번쯤 이후에 디버깅을 시작하고 싶거나 하는 일이 생길 때 유용하게 쓸 수 있습니다.
 
 ![breakpoint-hitcount](/images/eclipse-debugger/breakpoint-hitcount.png)
 
