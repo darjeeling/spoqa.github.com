@@ -28,7 +28,7 @@ description: Eclipse의 디버거의 사용 방법을 소개합니다.
 ---
 보통 디버깅을 할 때 가장 먼저 하는 일이 브레이크 포인트를 잡는 일입니다. 브레이크 포인트를 에러가 일어나는 라인이나 혹은 의심이 가는 변수를 추적할 수 있는 라인쯤에 잡아놓고 프로그램을 디버깅하면 해당 라인을 실행할 때 디버거가 작동하게 되고 그곳에서 프로그램을 라인 별로 진행해가며 관찰을 진행할 수 있게 됩니다.
 
-브레이크 포인트 설정은 매우 간단합니다. 편집기 왼쪽에 파란 부분(마커 바)을 더블 클릭하게 되면 파란 원이 생기는데 이 원이 브레이크 포인트입니다. 혹은 오른 클릭하여 Toggle break point를 누르면 됩니다. 설정 후 다시 더블 클릭하게 되면 브레이크 포인트가 사라지게 됩니다.
+브레이크 포인트 설정은 매우 간단합니다. 편집기 왼쪽에 파란 부분(마커 바)을 더블 클릭하게 되면 파란 원이 생기는데 이 원이 브레이크 포인트입니다. 혹은 오른 클릭하여 <code>Toggle break point</code>를 누르면 됩니다. 설정 후 다시 더블 클릭하게 되면 브레이크 포인트가 사라지게 됩니다.
 
 ![toggle-breakpoint](/images/eclipse-debugger/toggle-breakpoint.png)
 
@@ -102,7 +102,7 @@ Expression 뷰에서는 변수 이름을 입력하거나 수행해보고 싶은 
 
 ![breakpoint-properties](/images/eclipse-debugger/breakpoint-properties.png)
 
-먼저 Condition을 활성화하여 어떤 Condition에서 디버깅 화면으로 전환할지를 쓰면 되는데 이 창에 조건식을 쓰면 됩니다.
+먼저 <code>Conditional</code>을 활성화하여 어떤 조건에서 디버깅 화면으로 전환할지를 쓰면 되는데 이 창에 조건식을 쓰면 됩니다.
 
 ![breakpoint-condition](/images/eclipse-debugger/breakpoint-condition.png)
 
