@@ -14,7 +14,7 @@ publish: true
 
 [WSGI]에 대해 기억이 가물하신 분들을 위해 [지난 글](http://spoqa.github.com/2011/12/24/about-spoqa-server-stack.html)의 일부를 잠깐 다시 살펴보죠.
 
->이 경우 [uwsgi]는 일종의 **어플리케이션 컨테이너(Application Container)**로 동작하게 됩니다. 적재한 어플리케이션을 실행만 시켜주는 역할이죠. 이러한 [uwsgi]에 적재할 어플리케이션(스포카 서버)에는 일종의 규격이 존재하는데, 이걸 [WSGI]라고 합니다.(정확히는 [WSGI]에 의해 정의된 어플리케이션을 돌릴 수 있게 설계된 컨테이너가 [uwsgi]라고 봐야겠지만요.) [WSGI]는 [Python] 표준([PEP-033](http://www.python.org/dev/peps/pep-0333/))으로 [HTTP]를 통해 요청을 받아 응답하는 어플리케이션에 대한 명세로 이러한 명세를 만족시키는 클래스나 함수, ([\_\_call\_\_](http://docs.python.org/reference/datamodel.html#object.__call__)을 통해 부를 수 있는)객체를 **WSGI 어플리케이션**이라고 합니다.
+>이 경우 [uwsgi]는 일종의 **어플리케이션 컨테이너(Application Container)**로 동작하게 됩니다. 적재한 어플리케이션을 실행만 시켜주는 역할이죠. 이러한 [uwsgi]에 적재할 어플리케이션(스포카 서버)에는 일종의 규격이 존재하는데, 이걸 [WSGI]라고 합니다.(정확히는 [WSGI]에 의해 정의된 어플리케이션을 돌릴 수 있게 설계된 컨테이너가 [uwsgi]라고 봐야겠지만요.) [WSGI]는 [Python] 표준([PEP-333](http://www.python.org/dev/peps/pep-0333/))으로 [HTTP]를 통해 요청을 받아 응답하는 어플리케이션에 대한 명세로 이러한 명세를 만족시키는 클래스나 함수, ([\_\_call\_\_](http://docs.python.org/reference/datamodel.html#object.__call__)을 통해 부를 수 있는)객체를 **WSGI 어플리케이션**이라고 합니다.
 
 글로는 감이 잘 안오신다구요? 그럼 코드를 보면서 같이 살펴봅시다. (모든 코드는 [Python] 2.7에서 테스트 되었습니다.)
 
