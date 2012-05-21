@@ -33,7 +33,7 @@ description: 최근 앱 개발중 있었던 문제를 살펴보면서 패키지�
 
 <script src="https://gist.github.com/2724011.js?file=3.java"></script>
 
-마지막으로 패키지 매니저의 [getLaunchIntentForPackage메서드](http://developer.android.com/reference/android/content/pm/PackageManager.html#getLaunchIntentForPackage\(java.lang.String\))에 앱의 패키지 명을 넣어 호출하면 다른 가용한 앱을 무시하고 패키지 명을 가진 앱을 호출하게 됩니다. 따라서 디폴트 브라우저를 통한 브라우징이 가능합니다.
+마지막으로 패키지 매니저의 [getLaunchIntentForPackage메서드](http://developer.android.com/reference/android/content/pm/PackageManager.html#getLaunchIntentForPackage\(java.lang.String\))에 앱의 패키지 명을 넣으면 다른 사용 가능한 앱을 무시하고 해당 패키지 명을 가진 앱을 호출하게 됩니다. 따라서 디폴트 브라우저를 통한 브라우징이 가능합니다.
 
 ### 마치며
 ---
