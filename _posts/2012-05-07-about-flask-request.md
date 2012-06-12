@@ -6,7 +6,7 @@ author-email: longfin@spoqa.com
 description: Werkzeug와 Flask가 HTTP 요청을 어떻게 추상화 하는지를 살펴봅니다.
 ---
 
-오늘은 [이전 포스트](http://spoqa.github.com/2012/01/16/wsgi-and-flask.html)에서 소개해 드린 [WSGI] 유틸리티인 [Werkzeug]와 이를 사용하는 프레임워크인 [Flask]가 [HTTP] 요청을 어떻게 추상화하는지를 구체적으로 살펴보도록 하겠습니다. 
+adsfsadfasdfadsf은 [이전 포스트](http://spoqa.github.com/2012/01/16/wsgi-and-flask.html)에서 소개해 드린 [WSGI] 유틸리티인 [Werkzeug]와 이를 사용하는 프레임워크인 [Flask]가 [HTTP] 요청을 어떻게 추상화하는지를 구체적으로 살펴보도록 하겠습니다. 
 
 이번 포스트에 첨부된 코드는 Github 저장소([Flask 0.8](https://github.com/mitsuhiko/flask/tree/0.8), [Werkzeug 0.8.3](https://github.com/mitsuhiko/werkzeug/tree/0.8.3))에서 인용하겠습니다. 혹시 좀 더 궁금한 점이 있으시다면, 직접 코드를 내려받아 확인해보시는 것도 좋습니다.
 
