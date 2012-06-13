@@ -48,7 +48,7 @@ publish: true
 ![5a_layer.png](/images/bitmap-vector/5a_layer.png)
 ![5b_layer.png](/images/bitmap-vector/5b_layer.png)
 
-또한 Photoshop은 애초에 그래픽 디자인 툴이 아닌 사진 편집 툴이기에 메트릭 체계를 다루기가 상대적으로 좋지 않습니다. 그래서 좌표나 크기<sub>dimension</sub> 기반의 디자인 작업을 하기에 비직관적인 면이 있습니다. 또한 Photoshop은 가이드의 기능이 부실하여 그래픽 디자인의 기본이라 할 수 있는 그리드 시스템을 운용하는데 있어서도 Illustrator에 비해 많은 단점을 가지고 있습니다.
+또한 Photoshop은 Adobe의 프로그램 설계 의도가 그래픽 디자인 툴이 아닌 사진 편집 툴이기에 메트릭 체계를 다루기가 상대적으로 좋지 않습니다. 그래서 좌표나 크기<sub>dimension</sub> 기반의 디자인 작업을 하기에 비직관적인 면이 있습니다. 또한 Photoshop은 가이드의 기능이 부실하여 그래픽 디자인의 기본이라 할 수 있는 그리드 시스템을 운용하는데 있어서도 Illustrator에 비해 많은 단점을 가지고 있습니다.
 
 벡터 방식의 장단점
 ---
