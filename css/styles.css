@@ -4,7 +4,7 @@ padding: 0;
 }
 
 body {
-background-color: #E6ECED;
+background-color: #E6E6E6;
 width: 100%;
 height: 100%;
 }
@@ -23,26 +23,38 @@ padding-right: 4px;
 
 a {
 /*font-weight: bold;*/
-color: #104047;
+color: #323232;
 text-decoration: none;
+font-family: Helvetica, sans-serif, "NanumGothic", Arial;
 }
 
 h1, h2, h3, h4 ,h5, h6 {
-font-family: arial;
-color: #444;
+font-family: "NanumGothic", Helvetica, sans-serif, Arial;
+color: #323232;
 text-shadow: 1px 1px 1px white;
 }
+
 h2, h3, h4, h5, h6 {
 margin-top:30px;
 }
+
+h2 {
+font-size: 18px;
+margin-top: 40px;
+}
+
 p {
+font-family: "NanumGothic", Helvetica, sans-serif, Arial;
+font-size: 14px;
+color: #323232;
 margin-top: 20px;
 margin-bottom: 20px;
 line-height: 1.8em;
 }
 
 .selected {
-font-weight: bold; text-decoration: underline;
+font-weight: bold; text-decoration: none;
+color: #323232;
 }
 
 #menu-list ol {
@@ -52,17 +64,17 @@ display: inline-block;
 display: inline;
 }
 #menu-list {
-font-family: arial;
+font-family: Helvetica, sans-serif, Arial;
 text-shadow: 1px 1px 1px white;
-color: #444; 
-font-size: 20px;
+color: #323232; 
+font-size: 18px;
 margin-top: 10px;
 }
 #menu-list .seperator {
-color: #BBB;
+color: #969696;
 }
 #menu-list a {
-color: #000;
+color: #323232;
 }
 
 #recruit-ribbon {
@@ -73,7 +85,7 @@ top: 0;
 
 .content-body {
 width: 96%;
-max-width: 800px;
+max-width: 600px;
 margin-left: auto;
 margin-right: auto;
 padding: 2%;
@@ -122,6 +134,7 @@ margin-bottom: 20px;
 .post-author-info {
 margin-top: 20px;
 margin-bottom: 20px;
+font-size: 12px;
 }
 .post-author-info .portrait {
 width: 7%;
@@ -146,6 +159,7 @@ margin-bottom: 10px;
 
 .post a {
 font-weight: bold;
+
 }
 
 .post img {
@@ -159,11 +173,10 @@ margin-bottom: 20px;
 }
 
 .post-title {
-font-family: "NanumGothic", Monaco, "Courier New", mono;
+font-family: "NanumGothic", Helvetica, sans-serif, Arial;
 font-weight: bold;
-font-size: 19px;
-color: #104047;
-font-size: 30px;
+font-size: 24px;
+color: #323232;
 }
 
 .post-description {
@@ -176,7 +189,7 @@ line-height: 1.8em;
 .pagination {
 text-align: center;
 padding: 10px;
-font-family: Helvetica, sans-serif;
+font-family: Helvetica, sans-serif, Arial;
 }
 .pagination p {
 display:inline;
