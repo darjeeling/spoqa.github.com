@@ -13,12 +13,13 @@ ol, li {
 list-style-position: inside;
 }
 
+pre {
+padding: 5px;
+}
+
 code {
-background-color: #E9EFF0;
-border: 1px solid #CCC;
+background-color: #FFF;
 padding: 2px;
-padding-left: 4px;
-padding-right: 4px;
 }
 
 a {
