@@ -44,7 +44,7 @@ description: 템플릿 언어 Jinja2의 동작 방식과 지원하는 API를 통
  
  가장 먼저 떠오르는 것은, 파일들을 읽어서 <code>.has\_permission</code> 따위의 문자열이 있는지를 보는 것입니다. 이런 단순 문자열 매칭도 썩 나쁜 방법은 아니지만, 우리가 <code>.has\_permission</code>이 우리가 찾는 함수 호출인지 아니면 다른 문자열(이를테면 CSS의 클래스명이랄지.)인지 분간할 수 없다는 치명적인 문제가 있습니다. 
  
-이쯤에서 "[Jinja2]는 그럼 어떻게 저런 문자열을 처리하지?" 라는 생각이 드시는 분들도 계실 겁니다. (저 역시 그랬고요.) 템플릿 언어인 [Jinja2]는 다른 여타 프로그래밍 언어처럼 [문자열을 읽어서 토큰 단위로 자르는 기능(Lexer)](http://en.wikipedia.org/wiki/Lexical_analysis)과 잘린 토큰들을 분석해서 [AST(Abstract Syntax Tree)](http://jinja.pocoo.org/docs/extensions/#ast)로 [만들어 내는 기능(Parser)](http://en.wikipedia.org/wiki/Parser)를 갖추고 있습니다. 더욱이 이런 기능들을 [API로 제공](http://jinja.pocoo.org/docs/api/#low-level-api)하기 때문에 사용자가 직접 호출하는 것도 가능하죠. 이렇게 말입니다.
+이쯤에서 "[Jinja2]는 그럼 어떻게 저런 문자열을 처리하지?" 라는 생각이 드시는 분들도 계실 겁니다. (저 역시 그랬고요.) 템플릿 언어인 [Jinja2]는 다른 여타 프로그래밍 언어처럼 [문자열을 읽어서 토큰 단위로 자르는 기능(Lexer)](http://en.wikipedia.org/wiki/Lexical_analysis)과 잘린 토큰들을 분석해서 [AST(Abstract Syntax Tree)](http://en.wikipedia.org/wiki/Abstract_syntax_tree)로 [만들어 내는 기능(Parser)](http://en.wikipedia.org/wiki/Parser)를 갖추고 있습니다. 더욱이 이런 기능들을 [API로 제공](http://jinja.pocoo.org/docs/api/#low-level-api)하기 때문에 사용자가 직접 호출하는 것도 가능하죠. 이렇게 말입니다.
 
 <script src="https://gist.github.com/3000690.js?file=parse_template.py"></script>
 
