@@ -100,11 +100,11 @@ Display
 
 예를들어 1920*1200의 해상도를 가진 24 inch의 모니터는 94.34 PPI<sub>pixel-per-inch</sub>입니다. 그렇다면 위 모니터에서의 16 px의 크기는 다음과 같습니다.
 
-<center>16 px = 94.34/16 inch = 5.89625 inch</center>
+<center>16 px = 16/94.34 inch = 0.1696 inch</center>
 
 하지만 제 맥북프로는 1280*800 해상도에 13 inch의 디스플레이를 탑재하고 있으므로 116.11 PPI<sub>pixel-per-inch</sub>입니다. 그러므로 16 px의 크기는 실질적으로 다음과 같이 보입니다.
 
-<center>16 px = 116.11/16 inch = 7.256875 inch</center>
+<center>16 px = 16/116.11 inch = 0.1378 inch</center>
 
 Reference
 ---
